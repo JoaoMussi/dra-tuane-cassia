@@ -1,13 +1,8 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
-import './assets/globals.css';
-import './assets/reset.css';
+import './styles/globals.css';
+import './styles/reset.css';
 import { Navigation } from 'components';
-
-const montserrat = Montserrat({
-	subsets: ['latin'],
-	weight: ['400', '500', '600', '700'],
-});
+import { montserrat } from './styles/fonts';
 
 export const metadata: Metadata = {
 	title: 'Dra Tuane Cássia',
@@ -22,7 +17,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={montserrat.className}>
+			<body className={`${montserrat.className}`}>
 				<Navigation />
 				{children}
 			</body>
