@@ -1,13 +1,22 @@
 'use client';
+import Link from 'next/link';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children: React.ReactNode;
 	showArrow?: boolean;
+	href?: string;
 }
 
-export default function Button({ showArrow = true, children, onClick }: ButtonProps) {
-	return (
-		<button className={`btn btn-primary btn-outline rounded-full`} onClick={onClick}>
+export default function Button({
+	showArrow = true,
+	children,
+	href,
+	onClick,
+}: ButtonProps) {
+	let buttonElement = (
+		<button
+			className={`btn btn-primary btn-outline rounded-full`}
+			onClick={onClick}>
 			{children}
 			{showArrow ? (
 				<svg
@@ -26,4 +35,10 @@ export default function Button({ showArrow = true, children, onClick }: ButtonPr
 			) : null}
 		</button>
 	);
+
+	if (href) {
+		buttonElement = <Link href={href}>{buttonElement}</Link>;
+	}
+
+	return buttonElement;
 }
