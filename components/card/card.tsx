@@ -14,16 +14,14 @@ export default function Card({
 	actions?: ReactElement;
 }) {
 	return (
-		<div className='card w-80 shadow-outer'>
+		<div className='card my-2 w-80 shadow-outer overflow-hidden'>
 			{imageAttrs ? (
-				<figure>
-					<Image
-						width={imageAttrs.width ?? 325}
-						height={imageAttrs.height ?? 200}
-						src={imageAttrs.src}
-						alt={imageAttrs.alt}
-					/>
-				</figure>
+				<Image
+					width={imageAttrs.width ?? 325}
+					height={imageAttrs.height ?? 200}
+					src={imageAttrs.src}
+					alt={imageAttrs.alt}
+				/>
 			) : null}
 			<div className='card-body flex space-y-2'>
 				<h3 className='card-title justify-center'>{title}</h3>
