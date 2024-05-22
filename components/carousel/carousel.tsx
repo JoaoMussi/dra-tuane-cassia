@@ -1,59 +1,40 @@
-import { Button, Card } from 'components';
-import { v4 as uuidv4 } from 'uuid';
+'use client';
 
-export default function Carousel() {
-	const id = uuidv4();
-	const cardList = [
-		{
-			title: 'Card 1',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
-		},
-		{
-			title: 'Card 2',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
-		},
-		{
-			title: 'Card 3',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
-		},
-		{
-			title: 'Card 4',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
-		},
-		{
-			title: 'Card 5',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
-		},
-		{
-			title: 'Card 6',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
-		},
-		{
-			title: 'Card 7',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
-		},
-		{
-			title: 'Card 8',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
-		},
-	];
+import styles from './carousel.module.css';
+import useEmblaCarousel from 'embla-carousel-react';
+import { Card, Button } from 'components';
+import { usePrevNextButtons } from './arrow-buttons/arrow-buttons';
+
+import { CardProps } from 'interfaces/card-props';
+import DotButton, { useDotButton } from './dot-button';
+import PrevButton from './arrow-buttons/prev-button';
+import NextButton from './arrow-buttons/next-button';
+
+export default function Carousel({
+	cards,
+	options,
+}: {
+	cards: CardProps[];
+	options: any;
+}) {
+	const [emblaRef, emblaApi] = useEmblaCarousel(options);
+	const { selectedIndex, scrollSnaps, onDotButtonClick } =
+		useDotButton(emblaApi);
+
+	const {
+		prevBtnDisabled,
+		nextBtnDisabled,
+		onPrevButtonClick,
+		onNextButtonClick,
+	} = usePrevNextButtons(emblaApi);
 
 	return (
-		<div className='w-full flex justify-center'>
-			<div className='w-3/4 carousel'>
-				{cardList.map((card, index) => (
-					<div
-						id={`${id}-card-${index}`}
-						key={`${id}-card-${index}`}
-						className='carousel-item overflow-hidden px-3'>
+		<section
+			className={`${styles.embla} ${styles.embla__viewport}`}
+			ref={emblaRef}>
+			<div className={styles.embla__container}>
+				{cards.map((card, index) => (
+					<div className={styles.embla__slide} key={index}>
 						<Card
 							title={card.title}
 							imageAttrs={card.imageAttrs}
@@ -63,6 +44,31 @@ export default function Carousel() {
 					</div>
 				))}
 			</div>
-		</div>
+
+			<div className={styles.embla__controls}>
+				<div className={styles.embla__buttons}>
+					<PrevButton
+						onClick={onPrevButtonClick}
+						disabled={prevBtnDisabled}
+					/>
+					<NextButton
+						onClick={onNextButtonClick}
+						disabled={nextBtnDisabled}
+					/>
+				</div>
+
+				<div className={styles.embla__dots}>
+					{scrollSnaps.map((_, index) => (
+						<DotButton
+							key={index}
+							onClick={() => onDotButtonClick(index)}
+							className={`m-1 btn btn-primary btn-circle btn-outline btn-xs`.concat(
+								index === selectedIndex ? ` btn-active` : ''
+							)}
+						/>
+					))}
+				</div>
+			</div>
+		</section>
 	);
 }
