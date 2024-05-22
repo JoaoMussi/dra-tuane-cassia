@@ -1,10 +1,9 @@
 'use client';
+import { ButtonProps } from 'interfaces/button-props';
 import Link from 'next/link';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	children: React.ReactNode;
+interface TuaneButtonProps extends ButtonProps {
 	showArrow?: boolean;
-	href?: string;
 }
 
 export default function Button({
@@ -12,7 +11,7 @@ export default function Button({
 	children,
 	href,
 	onClick,
-}: ButtonProps) {
+}: TuaneButtonProps) {
 	let buttonElement = (
 		<button
 			className={`btn btn-primary btn-outline rounded-full`}

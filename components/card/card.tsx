@@ -1,4 +1,5 @@
 import { NextImageAttrs } from 'interfaces';
+import { CardProps } from 'interfaces';
 import Image from 'next/image';
 import { ReactElement } from 'react';
 
@@ -7,12 +8,7 @@ export default function Card({
 	description,
 	imageAttrs,
 	actions,
-}: {
-	title: string;
-	description?: string;
-	imageAttrs?: NextImageAttrs;
-	actions?: ReactElement;
-}) {
+}: CardProps) {
 	return (
 		<div className='card my-2 w-80 shadow-outer overflow-hidden'>
 			{imageAttrs ? (
