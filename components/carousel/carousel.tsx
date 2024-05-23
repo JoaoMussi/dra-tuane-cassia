@@ -2,7 +2,8 @@
 
 import styles from './carousel.module.css';
 import useEmblaCarousel from 'embla-carousel-react';
-import { Card, Button } from 'components';
+import { EmblaOptionsType } from 'embla-carousel';
+import { TuaneCard, TuaneButton } from 'components';
 import { usePrevNextButtons } from './arrow-buttons/arrow-buttons';
 
 import { CardProps } from 'interfaces/card-props';
@@ -10,12 +11,12 @@ import DotButton, { useDotButton } from './dot-button';
 import PrevButton from './arrow-buttons/prev-button';
 import NextButton from './arrow-buttons/next-button';
 
-export default function Carousel({
+export default function TuaneCarousel({
 	cards,
 	options,
 }: {
 	cards: CardProps[];
-	options: any;
+	options: EmblaOptionsType;
 }) {
 	const [emblaRef, emblaApi] = useEmblaCarousel(options);
 	const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -35,11 +36,13 @@ export default function Carousel({
 			<div className={styles.embla__container}>
 				{cards.map((card, index) => (
 					<div className={styles.embla__slide} key={index}>
-						<Card
+						<TuaneCard
 							title={card.title}
 							imageAttrs={card.imageAttrs}
 							description={card.description}
-							actions={<Button showArrow>Saiba mais</Button>}
+							actions={
+								<TuaneButton showArrow>Saiba mais</TuaneButton>
+							}
 						/>
 					</div>
 				))}

@@ -1,9 +1,10 @@
 'use client';
 
+import { EmblaCarouselType } from 'embla-carousel';
 import { ButtonProps } from 'interfaces';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { SetStateAction, useCallback, useEffect, useState } from 'react';
 
-export const useDotButton = (emblaApi: any) => {
+export const useDotButton = (emblaApi: EmblaCarouselType) => {
 	const [selectedIndex, setSelectedIndex] = useState(0);
 	const [scrollSnaps, setScrollSnaps] = useState([]);
 
@@ -15,11 +16,11 @@ export const useDotButton = (emblaApi: any) => {
 		[emblaApi]
 	);
 
-	const onInit = useCallback((emblaApi: any) => {
-		setScrollSnaps(emblaApi.scrollSnapList());
+	const onInit = useCallback((emblaApi: EmblaCarouselType) => {
+		setScrollSnaps(emblaApi.scrollSnapList() as SetStateAction<never[]>);
 	}, []);
 
-	const onSelect = useCallback((emblaApi: any) => {
+	const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
 		setSelectedIndex(emblaApi.selectedScrollSnap());
 	}, []);
 

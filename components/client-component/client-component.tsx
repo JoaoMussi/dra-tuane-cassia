@@ -1,50 +1,52 @@
 'use client';
 
-import { Carousel } from 'components';
+import { TuaneCarousel } from 'components';
 
 export default function ClientComponent() {
+	const description = 'Isto descreve o cartão';
+	const imageAttrs = { src: '/woman-with-face-lotion.png', alt: 'sei la' };
 	const cardList = [
 		{
 			title: 'Card 1',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
+			description,
+			imageAttrs,
 		},
 		{
 			title: 'Card 2',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
+			description,
+			imageAttrs,
 		},
 		{
 			title: 'Card 3',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
+			description,
+			imageAttrs,
 		},
 		{
 			title: 'Card 4',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
+			description,
+			imageAttrs,
 		},
 		{
 			title: 'Card 5',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
+			description,
+			imageAttrs,
 		},
 		{
 			title: 'Card 6',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
+			description,
+			imageAttrs,
 		},
 		{
 			title: 'Card 7',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
+			description,
+			imageAttrs,
 		},
 		{
 			title: 'Card 8',
-			description: 'Isto descreve o cartão',
-			imageAttrs: { src: '/woman-with-face-lotion.png', alt: 'sei la' },
+			description,
+			imageAttrs,
 		},
 	];
 
-	return <Carousel cards={cardList} options={{ align: 'start' }} />;
+	return <TuaneCarousel cards={cardList} options={{ align: 'start' }} />;
 }

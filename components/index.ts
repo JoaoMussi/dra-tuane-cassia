@@ -1,4 +1,4 @@
-export { default as Button } from './button/button';
-export { default as Card } from './card/card';
-export { default as Carousel } from './carousel/carousel';
-export { default as Navigation } from './navigation/navigation';
+export { default as TuaneButton } from './button/button';
+export { default as TuaneCard } from './card/card';
+export { default as TuaneCarousel } from './carousel/carousel';
+export { default as TuaneNavigation } from './navigation/navigation';

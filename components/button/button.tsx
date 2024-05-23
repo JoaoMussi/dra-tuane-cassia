@@ -6,7 +6,7 @@ interface TuaneButtonProps extends ButtonProps {
 	showArrow?: boolean;
 }
 
-export default function Button({
+export default function TuaneButton({
 	showArrow = true,
 	children,
 	href,

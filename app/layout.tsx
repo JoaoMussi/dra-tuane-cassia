@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './styles/globals.css';
 import './styles/reset.css';
-import { Navigation } from 'components';
+import { TuaneNavigation } from 'components';
 import { montserrat } from './styles/fonts';
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${montserrat.className}`}>
-				<Navigation />
+				<TuaneNavigation />
 				{children}
 			</body>
 		</html>

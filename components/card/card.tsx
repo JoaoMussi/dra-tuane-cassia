@@ -1,9 +1,7 @@
-import { NextImageAttrs } from 'interfaces';
 import { CardProps } from 'interfaces';
 import Image from 'next/image';
-import { ReactElement } from 'react';
 
-export default function Card({
+export default function TuaneCard({
 	title,
 	description,
 	imageAttrs,
