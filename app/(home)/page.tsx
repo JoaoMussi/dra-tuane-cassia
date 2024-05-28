@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ClientComponent from 'components/client-component/client-component';
+import Image from 'next/image';
+import { TuaneButton } from 'components';
 
 export const metadata: Metadata = {
 	title: 'testing - Dra Tuane Cássia',
@@ -9,6 +11,31 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<div>
+			<div
+				className='hero min-h-96'
+				style={{
+					backgroundImage: `url('woman-with-face-lotion.png')`,
+				}}>
+				<div className='hero-overlay bg-opacity-60'></div>
+				<div className='hero-content text-center text-neutral-content'>
+					<div className='max-w-md flex flex-col gap-4'>
+						<Image
+							src='/logotipo-principal_01.png'
+							alt='Logotipo Dra Tuane Cássia'
+							width={600}
+							height={200}></Image>
+						<h1 className='hidden'>Dra. Tuane Cássia</h1>
+						<p className='m-5 text-lg'>
+							Realce sua beleza com naturalidade.
+						</p>
+						<div>
+							<TuaneButton outline={false}>
+								Agende uma avaliação
+							</TuaneButton>
+						</div>
+					</div>
+				</div>
+			</div>
 			<ClientComponent></ClientComponent>
 		</div>
 	);

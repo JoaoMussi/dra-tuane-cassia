@@ -3,10 +3,14 @@ import { ButtonProps } from 'interfaces/button-props';
 import Link from 'next/link';
 
 interface TuaneButtonProps extends ButtonProps {
+	variant?: string;
+	outline?: boolean;
 	showArrow?: boolean;
 }
 
 export default function TuaneButton({
+	variant = 'primary',
+	outline = true,
 	showArrow = true,
 	children,
 	href,
@@ -14,7 +18,9 @@ export default function TuaneButton({
 }: TuaneButtonProps) {
 	let buttonElement = (
 		<button
-			className={`btn btn-primary btn-outline rounded-full`}
+			className={`btn btn-${variant} ${
+				outline ? 'btn-outline' : null
+			} rounded-full`}
 			onClick={onClick}>
 			{children}
 			{showArrow ? (
