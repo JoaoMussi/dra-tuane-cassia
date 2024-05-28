@@ -32,7 +32,7 @@
 }
 @media (min-width: 1200px) {
 	.embla__viewport {
-		overflow: visible;
+		overflow: hidden;
 	}
 
 	.embla__container {

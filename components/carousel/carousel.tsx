@@ -1,15 +1,15 @@
 'use client';
 
-import styles from './carousel.module.css';
+import { TuaneButton, TuaneCard } from 'components';
+import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
-import { EmblaOptionsType } from 'embla-carousel';
-import { TuaneCard, TuaneButton } from 'components';
 import { usePrevNextButtons } from './arrow-buttons/arrow-buttons';
+import styles from './carousel.module.css';
 
 import { CardProps } from 'interfaces/card-props';
-import DotButton, { useDotButton } from './dot-button';
-import PrevButton from './arrow-buttons/prev-button';
 import NextButton from './arrow-buttons/next-button';
+import PrevButton from './arrow-buttons/prev-button';
+import DotButton, { useDotButton } from './dot-button';
 
 export default function TuaneCarousel({
 	cards,
@@ -19,15 +19,16 @@ export default function TuaneCarousel({
 	options: EmblaOptionsType;
 }) {
 	const [emblaRef, emblaApi] = useEmblaCarousel(options);
-	const { selectedIndex, scrollSnaps, onDotButtonClick } =
-		useDotButton(emblaApi);
+	const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
+		emblaApi as EmblaCarouselType
+	);
 
 	const {
 		prevBtnDisabled,
 		nextBtnDisabled,
 		onPrevButtonClick,
 		onNextButtonClick,
-	} = usePrevNextButtons(emblaApi);
+	} = usePrevNextButtons(emblaApi as EmblaCarouselType);
 
 	return (
 		<section
