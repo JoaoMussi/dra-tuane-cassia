@@ -11,6 +11,7 @@ module.exports = {
 	theme: {
 		extend: {
 			boxShadow: {
+				'inner-xl': 'inset 0px 0px 8px 1px rgba(0, 0, 0, 0.3)',
 				'outer': '2px 0px 10px 2px rgba(0, 0, 0, 0.3)'
 			}
 		},
