@@ -1,8 +1,8 @@
+import { TuaneNavigation, TuaneFooter } from 'components';
 import type { Metadata } from 'next';
+import { montserrat } from './styles/fonts';
 import './styles/globals.css';
 import './styles/reset.css';
-import { TuaneNavigation } from 'components';
-import { montserrat } from './styles/fonts';
 
 export const metadata: Metadata = {
 	title: 'Dra Tuane Cássia',
@@ -20,6 +20,7 @@ export default function RootLayout({
 			<body className={`${montserrat.className}`}>
 				<TuaneNavigation />
 				{children}
+				<TuaneFooter />
 			</body>
 		</html>
 	);
