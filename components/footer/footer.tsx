@@ -5,8 +5,8 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 export default function TuaneFooter() {
 	return (
-		<footer className='footer space-x-10 pl-28 py-10 bg-neutral text-neutral-content'>
-			<aside className='h-full place-content-center'>
+		<footer className='footer space-x-10 place-content-center justify-around py-10 bg-neutral text-neutral-content items-center'>
+			<aside className='h-full items-center'>
 				<Image
 					src='/logotipo-com-icone-bege.png'
 					alt='Logotipo Dra Tuane Cássia'

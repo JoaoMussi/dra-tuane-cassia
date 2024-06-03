@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { GoClock } from 'react-icons/go';
+import { HiBars3 } from 'react-icons/hi2';
 import { SlPhone } from 'react-icons/sl';
 
 export default function TuaneNavBar() {
@@ -18,7 +19,7 @@ export default function TuaneNavBar() {
 
 	return (
 		<div className='md:w-full z-[100] p-3 fixed subpixel-antialiased'>
-			<div className='flex items-center m-auto pl-6 bg-base-100 md:w-[1024px] rounded-md'>
+			<div className='flex items-center m-auto gap-3 pl-6 bg-base-100 py-3 sm:py-0 lg:w-[1024px] rounded-md'>
 				<div className='flex-1'>
 					<Link href={'/'}>
 						<Image
@@ -28,9 +29,9 @@ export default function TuaneNavBar() {
 							height={20}></Image>
 					</Link>
 				</div>
-				<div className='flex items-end flex-col pt-3 pr-3'>
+				<div className='flex sm:items-end flex-col sm:pt-3 pr-3'>
 					<div className='flex gap-5'>
-						<div className='flex items-center text-sm gap-3'>
+						<div className='hidden sm:flex items-center text-sm gap-3'>
 							<GoClock className='text-2xl text-primary' />
 							<div className='text-xs text-gray-500'>
 								<p className={`${mansoryMedium.className}`}>
@@ -40,7 +41,7 @@ export default function TuaneNavBar() {
 							</div>
 						</div>
 
-						<div className='flex items-center text-sm gap-3'>
+						<div className='hidden sm:flex items-center text-sm gap-3'>
 							<SlPhone className='text-2xl text-primary' />
 							<div className='text-xs text-gray-500'>
 								<p className={`${mansoryMedium.className}`}>
@@ -50,8 +51,51 @@ export default function TuaneNavBar() {
 							</div>
 						</div>
 						<TuaneButton>Agende sua avaliação</TuaneButton>
+						<details className='sm:hidden dropdown dropdown-end dropdown-bottom '>
+							<summary className='btn btn-square btn-ghost'>
+								<HiBars3 className='text-2xl text-primary' />
+							</summary>
+							<ul className='p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52'>
+								<li>
+									<Link
+										className={`link ${turnActiveLink(
+											TuaneRoutes.HOME
+										)}`}
+										href={TuaneRoutes.HOME}>
+										Página inicial
+									</Link>
+								</li>
+								<li>
+									<Link
+										className={`link ${turnActiveLink(
+											TuaneRoutes.SERVICES
+										)}`}
+										href={TuaneRoutes.SERVICES}>
+										Procedimentos
+									</Link>
+								</li>
+								<li>
+									<Link
+										className={`link ${turnActiveLink(
+											TuaneRoutes.ABOUT_ME
+										)}`}
+										href={TuaneRoutes.ABOUT_ME}>
+										Sobre mim
+									</Link>
+								</li>
+								<li>
+									<Link
+										className={`link ${turnActiveLink(
+											TuaneRoutes.CONTACT
+										)}`}
+										href={TuaneRoutes.CONTACT}>
+										Contato
+									</Link>
+								</li>
+							</ul>
+						</details>
 					</div>
-					<ul className='menu menu-horizontal px-1'>
+					<ul className='hidden sm:flex px-1 menu menu-horizontal'>
 						<li>
 							<Link
 								className={`link ${turnActiveLink(
