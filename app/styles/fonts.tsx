@@ -16,6 +16,7 @@ const mansoryBold = localFont({
 });
 
 const montserrat = Montserrat({
+	fallback: ['mansory'],
 	subsets: ['latin'],
 });
 

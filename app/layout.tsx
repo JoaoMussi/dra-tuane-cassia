@@ -1,13 +1,15 @@
-import { TuaneNavigation, TuaneFooter } from 'components';
+import { TuaneFooter, TuaneNavBar } from 'components';
 import type { Metadata } from 'next';
 import { montserrat } from './styles/fonts';
 import './styles/globals.css';
 import './styles/reset.css';
 
 export const metadata: Metadata = {
-	title: 'Dra Tuane Cássia',
-	description:
-		'Aqui você encontra tudo sobre a Dra Tuane Cássia e os serviços que ela oferece!',
+	title: {
+		template: '%s | Dra. Tuane Cássia',
+		default: 'Dra. Tuane Cássia',
+	},
+	description: 'Site oficial da biomédica esteta Dra Tuane Cássia.',
 };
 
 export default function RootLayout({
@@ -17,9 +19,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${montserrat.className}`}>
-				<TuaneNavigation />
-				{children}
+			<body
+				className={`${montserrat.className} min-h-screen flex flex-col`}>
+				<TuaneNavBar />
+				<div className='flex-1'>{children}</div>
 				<TuaneFooter />
 			</body>
 		</html>

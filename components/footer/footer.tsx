@@ -1,3 +1,4 @@
+import { TuaneRoutes } from 'interfaces';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -14,10 +15,10 @@ export default function TuaneFooter() {
 			</aside>
 			<nav>
 				<h6 className='footer-title'>Páginas</h6>
-				<Link href={'/'}>Página inicial</Link>
-				<Link href={'/services'}>Procedimentos</Link>
-				<Link href={'/about-me'}>Sobre mim</Link>
-				<Link href={'/contact'}>Contato</Link>
+				<Link href={TuaneRoutes.HOME}>Página inicial</Link>
+				<Link href={TuaneRoutes.SERVICES}>Procedimentos</Link>
+				<Link href={TuaneRoutes.ABOUT_ME}>Sobre mim</Link>
+				<Link href={TuaneRoutes.CONTACT}>Contato</Link>
 			</nav>
 			<nav>
 				<h6 className='footer-title'>Redes sociais</h6>
