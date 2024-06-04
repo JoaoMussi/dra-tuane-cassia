@@ -50,7 +50,9 @@ export default function TuaneNavBar() {
 								<p>(47) 99669-9607</p>
 							</div>
 						</div>
-						<TuaneButton>Agende sua avaliação</TuaneButton>
+						<TuaneButton showArrow={false}>
+							Agendar avaliação
+						</TuaneButton>
 						<details className='sm:hidden dropdown dropdown-end dropdown-bottom '>
 							<summary className='btn btn-square btn-ghost'>
 								<HiBars3 className='text-2xl text-primary' />
