@@ -1,4 +1,3 @@
-import { Montserrat } from 'next/font/google';
 import localFont from 'next/font/local';
 
 const mansory = localFont({
@@ -15,9 +14,4 @@ const mansoryBold = localFont({
 	src: '../../public/fonts/mansory/mansory_bold.woff2',
 });
 
-const montserrat = Montserrat({
-	fallback: ['mansory'],
-	subsets: ['latin'],
-});
-
-export { mansory, mansoryBold, mansoryMedium, mansorySemiBold, montserrat };
+export { mansory, mansoryBold, mansoryMedium, mansorySemiBold };

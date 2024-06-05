@@ -1,6 +1,6 @@
 import { TuaneFooter, TuaneNavBar } from 'components';
 import type { Metadata } from 'next';
-import { montserrat } from './styles/fonts';
+import { mansory } from './styles/fonts';
 import './styles/globals.css';
 import './styles/reset.css';
 
@@ -19,8 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body
-				className={`${montserrat.className} min-h-screen flex flex-col`}>
+			<body className={`${mansory.className} min-h-screen flex flex-col`}>
 				<TuaneNavBar />
 				<div className='flex-1'>{children}</div>
 				<TuaneFooter />
