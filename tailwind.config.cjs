@@ -10,10 +10,21 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontSize: {
+				'regular-p': ['0.875rem', {
+					letterSpacing: '0.1em',
+					lineHeight: '1.5rem',
+					fontWeight: '400'
+				}],
+			},
+			width: {
+				'regular-content': '820px',
+				'big-content': '1200px',
+			},
 			boxShadow: {
 				'inner-xl': 'inset 0px 0px 8px 1px rgba(0, 0, 0, 0.3)',
-				'outer': '2px 0px 10px 2px rgba(0, 0, 0, 0.3)'
-			}
+				outer: '2px 0px 10px 2px rgba(0, 0, 0, 0.3)',
+			},
 		},
 	},
 	plugins: [require('daisyui')],

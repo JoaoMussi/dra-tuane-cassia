@@ -18,7 +18,7 @@ export default function TuaneNavBar() {
 	}
 
 	return (
-		<div className='md:w-full z-[100] p-3 fixed subpixel-antialiased'>
+		<div className='w-full z-[100] p-3 fixed subpixel-antialiased'>
 			<div className='flex items-center m-auto gap-3 pl-6 bg-base-100 py-3 sm:py-0 lg:w-[1024px] rounded-md'>
 				<div className='flex-1'>
 					<Link href={'/'}>

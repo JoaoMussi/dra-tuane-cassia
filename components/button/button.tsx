@@ -1,4 +1,5 @@
 'use client';
+import { mansory } from 'app/styles/fonts';
 import { ButtonProps } from 'interfaces/button-props';
 import Link from 'next/link';
 
@@ -18,7 +19,7 @@ export default function TuaneButton({
 }: TuaneButtonProps) {
 	let buttonElement = (
 		<button
-			className={`btn btn-${variant} ${
+			className={`${mansory.className} btn btn-${variant} ${
 				outline ? 'btn-outline' : null
 			} rounded-full`}
 			onClick={onClick}>
