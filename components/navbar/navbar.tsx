@@ -2,7 +2,7 @@
 
 import { mansoryMedium } from 'app/styles/fonts';
 import TuaneButton from 'components/button/button';
-import { TuaneRoutes } from 'interfaces';
+import { TuaneRoutes } from 'lib';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';

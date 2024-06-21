@@ -1,4 +1,4 @@
-import { TuaneRoutes } from 'interfaces';
+import { TuaneRoutes } from 'lib';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
