@@ -32,7 +32,7 @@ export default function TuaneCarousel({
 
 	return (
 		<section
-			className={`card shadow-inner-xl w-big-content ${styles.embla} ${styles.embla__viewport}`}
+			className={`card shadow-inner-xl big-width ${styles.embla} ${styles.embla__viewport}`}
 			ref={emblaRef}>
 			<div className={styles.embla__container}>
 				{cards.map((card, index) => (
@@ -61,7 +61,7 @@ export default function TuaneCarousel({
 					/>
 				</div>
 
-				<div className={styles.embla__dots}>
+				<div className={`hidden md:flex ${styles.embla__dots}`}>
 					{scrollSnaps.map((_, index) => (
 						<DotButton
 							key={index}

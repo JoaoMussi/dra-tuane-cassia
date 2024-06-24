@@ -8,7 +8,7 @@ export default function TuaneCard({
 	actions,
 }: CardProps) {
 	return (
-		<div className='card my-2 w-80 shadow-outer overflow-hidden'>
+		<div className='card my-2 w-80 h-full shadow-outer overflow-hidden'>
 			{imageAttrs ? (
 				<Image
 					width={imageAttrs.width ?? 325}
@@ -17,9 +17,9 @@ export default function TuaneCard({
 					alt={imageAttrs.alt}
 				/>
 			) : null}
-			<div className='card-body flex space-y-2'>
+			<div className='card-body flex justify-between text-center space-y-2'>
 				<h3 className='card-title justify-center'>{title}</h3>
-				<p className='text-center'>{description}</p>
+				<p className='text-regular-p'>{description}</p>
 				<div className='card-actions justify-center'>{actions}</div>
 			</div>
 		</div>

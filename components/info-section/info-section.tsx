@@ -22,9 +22,9 @@ export default function TuaneInfoSection({
 	children: React.ReactNode;
 }) {
 	return (
-		<section className='w-full'>
+		<section className='regular-width'>
 			<div
-				className={`flex items-center m-auto w-regular-content gap-20 my-8 ${
+				className={`flex items-center gap-8 md:gap-44 my-8 ${
 					reverse
 						? 'flex-col-reverse md:flex-row-reverse'
 						: 'flex-col md:flex-row'
@@ -39,9 +39,9 @@ export default function TuaneInfoSection({
 					</p>
 					<div className='flex flex-col gap-2'>
 						{verifiedTopics?.map(topic => (
-							<div className='flex items-center gap-2'>
+							<div className='flex items-center justify-between gap-2'>
 								<FaCircleCheck className='text-primary text-xl' />
-								<p className='text-regular-p antialiased'>
+								<p className='text-regular-p antialiased max-w-[95%]'>
 									{topic}
 								</p>
 							</div>
