@@ -36,7 +36,7 @@ export const services: CardProps[] = [
 	{
 		title: 'Protocolos para emagrecimento',
 		description:
-			'Para auxiliar no processo de emagrecimento trabalhamos com enzimas para gordura localizada, hidrolipoclasia e aceleradores metabólicos. Esse procedimentos facilitam a eliminação das células de gordura do nosso corpo.',
+			'Auxiliam no emagrecimento com a eliminação de células de gorduras através de enzimas para gordura localizada, hidrolipoclasia e aceleradores metabólicos.',
 		imageAttrs: image,
 	},
 	{
