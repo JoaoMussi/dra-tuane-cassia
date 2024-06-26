@@ -8,7 +8,7 @@ export default function TuaneFooter() {
 		<footer className='footer space-x-10 place-content-center justify-around py-10 bg-neutral text-neutral-content items-center'>
 			<aside className='h-full items-center'>
 				<Image
-					src='/logotipo-com-icone-bege.png'
+					src='/logos/logotipo-com-icone-bege.png'
 					alt='Logotipo Dra Tuane Cássia'
 					width={300}
 					height={200}></Image>

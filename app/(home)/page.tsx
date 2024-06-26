@@ -20,7 +20,7 @@ export default function Home() {
 				<div className='hero-content text-center text-neutral-content'>
 					<div className='max-w-md flex flex-col gap-4 pt-[120px]'>
 						<Image
-							src='/logotipo-sem-icone-bege.png'
+							src='/logos/logotipo-sem-icone-bege.png'
 							alt='Logotipo Dra Tuane Cássia'
 							width={600}
 							height={200}></Image>

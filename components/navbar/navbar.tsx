@@ -24,13 +24,13 @@ export default function TuaneNavBar() {
 					<Link href={'/'}>
 						<Image
 							className='hidden sm:block'
-							src='/logotipo-com-icone-marrom.png'
+							src='/logos/logotipo-com-icone-marrom.png'
 							alt='Logotipo Dra Tuane Cássia'
 							width={300}
 							height={20}></Image>
 						<Image
 							className='sm:hidden'
-							src='/logotipo-marrom.png'
+							src='/logos/logotipo-marrom.png'
 							alt='Logotipo Dra Tuane Cássia'
 							width={42}
 							height={20}></Image>
