@@ -14,7 +14,7 @@ export default function Home() {
 			<div
 				className='hero h-[480px]'
 				style={{
-					backgroundImage: `url('woman-with-face-lotion.png')`,
+					backgroundImage: `url('images/woman-with-face-lotion.png')`,
 				}}>
 				<div className='hero-overlay bg-opacity-60'></div>
 				<div className='hero-content text-center text-neutral-content'>
@@ -41,7 +41,7 @@ export default function Home() {
 				sectionName='Sobre mim'
 				title='Bem-vindo(a)!'
 				image={{
-					src: '/woman-with-face-lotion.png',
+					src: '/images/full-body-tuane-2.jpg',
 					alt: 'Foto da Dra Tuane Cássia',
 				}}>
 				Olá, sou a Dra. Tuane Cássia, biomédica esteta e patologista
@@ -63,7 +63,7 @@ export default function Home() {
 				]}
 				buttonLabel='Saiba mais sobre nós'
 				image={{
-					src: '/woman-with-face-lotion.png',
+					src: '/images/woman-with-face-lotion.png',
 					alt: 'Foto da Dra Tuane Cássia',
 				}}>
 				Aqui entendemos que cada pessoa é única e merece um cuidado

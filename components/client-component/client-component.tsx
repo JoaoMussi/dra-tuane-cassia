@@ -4,7 +4,10 @@ import { TuaneCarousel } from 'components';
 
 export default function ClientComponent() {
 	const description = 'Isto descreve o cartão';
-	const imageAttrs = { src: '/woman-with-face-lotion.png', alt: 'sei la' };
+	const imageAttrs = {
+		src: '/images/woman-with-face-lotion.png',
+		alt: 'sei la',
+	};
 	const cardList = [
 		{
 			title: 'Card 1',
