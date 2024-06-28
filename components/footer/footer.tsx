@@ -1,4 +1,5 @@
 import { TuaneRoutes } from 'lib';
+import { Links } from 'lib/links';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -23,19 +24,13 @@ export default function TuaneFooter() {
 			<nav>
 				<h6 className='footer-title'>Redes sociais</h6>
 				<div className='grid grid-flow-col gap-4 text-4xl'>
-					<Link
-						href='https://www.facebook.com/biotuanecassia'
-						target='_blank'>
+					<Link href={Links.FACEBOOK} target='_blank'>
 						<FaFacebook />
 					</Link>
-					<Link
-						href='https://www.instagram.com/dra.tuanecassia/'
-						target='_blank'>
+					<Link href={Links.INSTAGRAM} target='_blank'>
 						<FaInstagram />
 					</Link>
-					<Link
-						href='https://api.whatsapp.com/send?phone=5547996699607&text='
-						target='_blank'>
+					<Link href={Links.WHATSAPP} target='_blank'>
 						<FaWhatsapp />
 					</Link>
 				</div>

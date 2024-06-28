@@ -34,13 +34,13 @@ export default function TuaneInfoSection({
 						<h2 className='text-primary'>{sectionName}</h2>
 						<p className='text-4xl'>{title}</p>
 					</hgroup>
-					<p className='text-regular-p text-justify antialiased'>
-						{children}
-					</p>
-					<div className='flex flex-col gap-2'>
+
+					{children}
+
+					<div className='flex flex-col gap-4'>
 						{verifiedTopics?.map(topic => (
-							<div className='flex items-center justify-between gap-2'>
-								<FaCircleCheck className='text-primary text-xl' />
+							<div className='flex items-start justify-between gap-2'>
+								<FaCircleCheck className='text-primary text-xl mt-1' />
 								<p className='text-regular-p antialiased max-w-[95%]'>
 									{topic}
 								</p>

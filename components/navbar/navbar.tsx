@@ -19,8 +19,8 @@ export default function TuaneNavBar() {
 
 	return (
 		<div className='w-full z-[100] p-3 fixed subpixel-antialiased'>
-			<div className='flex items-center m-auto gap-3 pl-6 bg-base-100 py-3 sm:py-0 lg:w-[1024px] rounded-md'>
-				<div className='flex-1'>
+			<div className='flex items-center justify-between m-auto gap-3 pl-6 bg-base-100 py-3 sm:py-0 lg:w-[1024px] rounded-md'>
+				<div>
 					<Link href={'/'}>
 						<Image
 							className='hidden sm:block'
@@ -35,6 +35,11 @@ export default function TuaneNavBar() {
 							width={42}
 							height={20}></Image>
 					</Link>
+				</div>
+				<div className='block sm:hidden'>
+					<TuaneButton showArrow={false}>
+						Agendar avaliação
+					</TuaneButton>
 				</div>
 				<div className='flex sm:items-end flex-col sm:pt-3 pr-3'>
 					<div className='flex gap-5'>
@@ -57,9 +62,11 @@ export default function TuaneNavBar() {
 								<p>(47) 99669-9607</p>
 							</div>
 						</div>
-						<TuaneButton showArrow={false}>
-							Agendar avaliação
-						</TuaneButton>
+						<div className='hidden sm:block'>
+							<TuaneButton showArrow={false}>
+								Agendar avaliação
+							</TuaneButton>
+						</div>
 						<details className='sm:hidden dropdown dropdown-end dropdown-bottom '>
 							<summary className='btn btn-square btn-ghost'>
 								<HiBars3 className='text-2xl text-primary' />
