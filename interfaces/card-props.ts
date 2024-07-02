@@ -6,4 +6,5 @@ export interface CardProps {
 	description?: string;
 	imageAttrs?: NextImageAttrs;
 	actions?: ReactElement;
+	hideAction?: boolean;
 }

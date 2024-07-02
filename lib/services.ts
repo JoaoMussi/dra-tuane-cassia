@@ -1,11 +1,12 @@
 import { CardProps } from 'interfaces';
 
-export const services: CardProps[] = [
+export const tuaneServices: CardProps[] = [
 	{
 		title: 'Toxina Botulínica',
 		description:
 			'Popularmente conhecida como Botox®, esse procedimento promove o relaxamento da musculatura da face e do pescoço melhorando o aspecto das rugas e linhas de expressão.',
 		imageAttrs: { src: '/images/botox.jpeg', alt: 'Aplicação de botox' },
+		hideAction: true,
 	},
 	{
 		title: 'Preenchimento com ácido hialurônico',
@@ -15,6 +16,7 @@ export const services: CardProps[] = [
 			src: '/images/filler.jpeg',
 			alt: 'Apresentação de boca com preenchimento',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'Bioestimuladores de colágeno',
@@ -24,6 +26,7 @@ export const services: CardProps[] = [
 			src: '/images/colagen.jpeg',
 			alt: 'Efeitos do colágeno sendo apresentados na foto',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'Microagulhamento',
@@ -33,6 +36,7 @@ export const services: CardProps[] = [
 			src: '/images/microneedle.jpeg',
 			alt: 'Microagulhamento aplicado em uma mulher',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'Peeling químico',
@@ -42,6 +46,7 @@ export const services: CardProps[] = [
 			src: '/images/peeling.jpeg',
 			alt: 'Peeling sendo aplicado em uma mulher',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'Protocolos para emagrecimento',
@@ -51,6 +56,7 @@ export const services: CardProps[] = [
 			src: '/images/skinner.jpeg',
 			alt: 'Mulher mostrando gordura localizada no próprio corpo',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'Lipo de papada enzimática',
@@ -60,6 +66,7 @@ export const services: CardProps[] = [
 			src: '/images/papada.jpeg',
 			alt: 'Fotos comparativas com resultados da enzima de papada',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'PEIM: Procedimento Estético Injetável para Microvasos',
@@ -69,6 +76,7 @@ export const services: CardProps[] = [
 			src: '/images/microneedle.jpeg',
 			alt: 'Mulher mostrando alguns microvasos na perna',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'Skinbooster',
@@ -76,8 +84,9 @@ export const services: CardProps[] = [
 			'Hidrata a pele de dentro para fora através de injeções de ácido hialurônico e ativos.',
 		imageAttrs: {
 			src: '/images/woman-with-face-lotion.png',
-			alt: 'sei la',
+			alt: 'Mulher mostrando o skinbooster na pele',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'Tratamentos  capilares',
@@ -87,6 +96,7 @@ export const services: CardProps[] = [
 			src: '/images/capilar.jpeg',
 			alt: 'Homem aplicando enzimas no cabelo',
 		},
+		hideAction: true,
 	},
 	{
 		title: 'Limpeza de pele',
@@ -96,5 +106,6 @@ export const services: CardProps[] = [
 			src: '/images/limpeza.jpeg',
 			alt: 'Mulher realizando limpeza de pele',
 		},
+		hideAction: true,
 	},
 ];

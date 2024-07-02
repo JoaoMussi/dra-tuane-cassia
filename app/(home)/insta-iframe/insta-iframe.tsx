@@ -1,4 +1,4 @@
-import { Links } from 'lib/links';
+import { TuaneLinks } from 'lib/links';
 import Link from 'next/link';
 import { FaInstagram } from 'react-icons/fa';
 
@@ -9,7 +9,7 @@ export default function TuaneInstaIframe() {
 				<p className='text-white'>@dra.tuanecassia</p>
 				<Link
 					role='button'
-					href={Links.INSTAGRAM}
+					href={TuaneLinks.INSTAGRAM}
 					target='_blank'
 					className='btn bg-blue-500 text-white'>
 					<FaInstagram className='text-xl' />

@@ -42,7 +42,11 @@ export default function TuaneCarousel({
 							imageAttrs={card.imageAttrs}
 							description={card.description}
 							actions={
-								<TuaneButton showArrow>Saiba mais</TuaneButton>
+								card.hideAction ? undefined : (
+									<TuaneButton showArrow>
+										Saiba mais
+									</TuaneButton>
+								)
 							}
 						/>
 					</div>

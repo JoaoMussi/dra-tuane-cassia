@@ -11,6 +11,7 @@ export default function TuaneInfoSection({
 	reverse = false,
 	verifiedTopics,
 	buttonLabel,
+	buttonHref,
 	children,
 }: {
 	sectionName: string;
@@ -19,6 +20,7 @@ export default function TuaneInfoSection({
 	reverse?: boolean;
 	verifiedTopics?: string[];
 	buttonLabel?: string;
+	buttonHref?: string;
 	children: React.ReactNode;
 }) {
 	return (
@@ -49,7 +51,9 @@ export default function TuaneInfoSection({
 					</div>
 					{buttonLabel && (
 						<div className='w-full flex flex-col items-center'>
-							<TuaneButton>{buttonLabel}</TuaneButton>
+							<TuaneButton href={buttonHref}>
+								{buttonLabel}
+							</TuaneButton>
 						</div>
 					)}
 				</div>

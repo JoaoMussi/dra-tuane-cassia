@@ -1,5 +1,5 @@
 import { TuaneCarousel, TuaneInfoSection, TuaneParagraph } from 'components';
-import { services } from 'lib/services';
+import { tuaneServices } from 'lib/services';
 import { Metadata } from 'next';
 import TuaneHeroSection from './hero/hero';
 import TuaneInstaIframe from './insta-iframe/insta-iframe';
@@ -44,7 +44,6 @@ export default function Home() {
 					'Tratamentos capilares personalizados para manter a saúde e beleza de seus cabelos;',
 					'Tratamentos corporais para ajudar você a alcançar a aparência desejada de forma segura e efetiva.',
 				]}
-				buttonLabel='Saiba mais sobre nós'
 				image={{
 					src: '/images/clinica-dukeze.jpg',
 					alt: 'Foto da Dra Tuane Cássia',
@@ -59,7 +58,7 @@ export default function Home() {
 				</TuaneParagraph>
 			</TuaneInfoSection>
 
-			<TuaneCarousel cards={services} options={{ align: 'start' }} />
+			<TuaneCarousel cards={tuaneServices} options={{ align: 'start' }} />
 
 			<TuaneInstaIframe />
 		</div>

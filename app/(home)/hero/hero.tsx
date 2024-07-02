@@ -1,4 +1,5 @@
 import { TuaneButton } from 'components';
+import { TuaneLinks } from 'lib';
 import Image from 'next/image';
 
 export default function TuaneHeroSection() {
@@ -21,7 +22,7 @@ export default function TuaneHeroSection() {
 						Realce sua beleza com naturalidade.
 					</p>
 					<div>
-						<TuaneButton outline={false}>
+						<TuaneButton href={TuaneLinks.WHATSAPP} outline={false}>
 							Agende uma avaliação
 						</TuaneButton>
 					</div>

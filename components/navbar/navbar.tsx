@@ -81,7 +81,7 @@ export default function TuaneNavBar() {
 										Página inicial
 									</Link>
 								</li>
-								<li>
+								{/* <li>
 									<Link
 										className={`link ${turnActiveLink(
 											TuaneRoutes.SERVICES
@@ -89,8 +89,8 @@ export default function TuaneNavBar() {
 										href={TuaneRoutes.SERVICES}>
 										Procedimentos
 									</Link>
-								</li>
-								<li>
+								</li> */}
+								{/* <li>
 									<Link
 										className={`link ${turnActiveLink(
 											TuaneRoutes.ABOUT_ME
@@ -98,7 +98,7 @@ export default function TuaneNavBar() {
 										href={TuaneRoutes.ABOUT_ME}>
 										Sobre mim
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link
 										className={`link ${turnActiveLink(
@@ -121,7 +121,7 @@ export default function TuaneNavBar() {
 								Página inicial
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<details>
 								<summary>Procedimentos</summary>
 								<ul>
@@ -136,8 +136,8 @@ export default function TuaneNavBar() {
 									</li>
 								</ul>
 							</details>
-						</li>
-						<li>
+						</li> */}
+						{/* <li>
 							<Link
 								className={`link ${turnActiveLink(
 									TuaneRoutes.ABOUT_ME
@@ -145,7 +145,7 @@ export default function TuaneNavBar() {
 								href={TuaneRoutes.ABOUT_ME}>
 								Sobre mim
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link
 								className={`link ${turnActiveLink(
