@@ -13,18 +13,20 @@ export default function TuaneInfoSection({
 	buttonLabel,
 	buttonHref,
 	children,
+	regularWidth = true,
 }: {
 	sectionName: string;
 	title: string;
-	image: NextImageAttrs;
+	image?: NextImageAttrs;
 	reverse?: boolean;
 	verifiedTopics?: string[];
 	buttonLabel?: string;
 	buttonHref?: string;
 	children: React.ReactNode;
+	regularWidth?: boolean;
 }) {
 	return (
-		<section className='regular-width'>
+		<section className={regularWidth ? 'regular-width' : undefined}>
 			<div
 				className={`flex items-center gap-8 md:gap-44 my-8 ${
 					reverse
@@ -57,12 +59,14 @@ export default function TuaneInfoSection({
 						</div>
 					)}
 				</div>
-				<Image
-					src={image.src}
-					alt={image.alt}
-					width={image.width ?? 250}
-					height={image.height ?? 200}
-				/>
+				{image && (
+					<Image
+						src={image.src}
+						alt={image.alt}
+						width={image.width ?? 250}
+						height={image.height ?? 200}
+					/>
+				)}
 			</div>
 		</section>
 	);
