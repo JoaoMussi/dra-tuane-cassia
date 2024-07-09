@@ -2,7 +2,7 @@
 
 import { mansoryMedium } from 'app/styles/fonts';
 import TuaneButton from 'components/button/button';
-import { TuaneRoutes } from 'lib';
+import { TuaneLinks, TuaneRoutes } from 'lib';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -37,7 +37,10 @@ export default function TuaneNavBar() {
 					</Link>
 				</div>
 				<div className='block sm:hidden'>
-					<TuaneButton showArrow={false}>
+					<TuaneButton
+						href={TuaneLinks.WHATSAPP}
+						showArrow={false}
+						externalLink>
 						Agendar avaliação
 					</TuaneButton>
 				</div>
@@ -63,7 +66,10 @@ export default function TuaneNavBar() {
 							</div>
 						</div>
 						<div className='hidden sm:block'>
-							<TuaneButton showArrow={false}>
+							<TuaneButton
+								href={TuaneLinks.WHATSAPP}
+								externalLink
+								showArrow={false}>
 								Agendar avaliação
 							</TuaneButton>
 						</div>

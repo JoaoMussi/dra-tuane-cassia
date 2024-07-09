@@ -22,7 +22,10 @@ export default function TuaneHeroSection() {
 						Realce sua beleza com naturalidade.
 					</p>
 					<div>
-						<TuaneButton href={TuaneLinks.WHATSAPP} outline={false}>
+						<TuaneButton
+							href={TuaneLinks.WHATSAPP}
+							outline={false}
+							externalLink>
 							Agende uma avaliação
 						</TuaneButton>
 					</div>
