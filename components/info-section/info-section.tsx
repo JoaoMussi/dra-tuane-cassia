@@ -8,25 +8,29 @@ export default function TuaneInfoSection({
 	sectionName,
 	title,
 	image,
+	about,
 	reverse = false,
 	verifiedTopics,
 	buttonLabel,
 	buttonHref,
-	children,
 	regularWidth = true,
+	children,
 }: {
 	sectionName: string;
 	title: string;
+	about: string;
 	image?: NextImageAttrs;
 	reverse?: boolean;
 	verifiedTopics?: string[];
 	buttonLabel?: string;
 	buttonHref?: string;
-	children: React.ReactNode;
 	regularWidth?: boolean;
+	children: React.ReactNode;
 }) {
 	return (
-		<section className={regularWidth ? 'regular-width' : undefined}>
+		<section
+			about={about}
+			className={regularWidth ? 'regular-width' : undefined}>
 			<div
 				className={`flex items-center gap-8 md:gap-44 my-8 ${
 					reverse

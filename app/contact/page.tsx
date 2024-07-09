@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 export default function Contact() {
 	return (
-		<section className='regular-width flex justify-between'>
+		<div className='regular-width flex justify-between mt-40'>
 			<div className='w-1/2'></div>
 			<TuaneAddress></TuaneAddress>
-		</section>
+		</div>
 	);
 }

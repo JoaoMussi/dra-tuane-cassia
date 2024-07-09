@@ -16,28 +16,33 @@ export default function Home() {
 			<TuaneInfoSection
 				sectionName='Sobre mim'
 				title='Bem-vindo(a)!'
+				about='Apresentação sobre a Dra Tuane Cássia'
 				image={{
 					src: '/images/full-body-tuane-2.jpg',
 					alt: 'Foto da Dra Tuane Cássia',
-					width: 350,
+					width: 300,
 				}}>
 				<TuaneParagraph>
-					Olá, sou a Dra. Tuane Cássia, biomédica esteta e patologista
-					clínica, me formei na faculdade de biomedicina pela Católica
-					de Santa Catarina em 2020, onde também realizei minha pós
-					graduação em estética avançada.
+					Olá! Sou a Dra. Tuane Cássia e sou biomédica esteta e
+					patologista clínica. Me formei na faculdade de biomedicina
+					pela Católica de Santa Catarina em 2020, onde também
+					realizei minha pós graduação em estética avançada.
 				</TuaneParagraph>
 				<TuaneParagraph>
-					Meu objetivo como profissional é elevar a autoestima das
-					pessoas de forma natural e sem exageros, gerenciando o
-					processo de envelhecimento e realçando os traços da sua
-					própria identidade.
+					Meu objetivo como profissional é{' '}
+					<b className='font-bold'>elevar a autoestima</b> das pessoas
+					de forma <b className='font-bold'>natural e sem exageros</b>
+					, gerenciando o processo de envelhecimento e realçando os
+					traços da sua própria identidade.
 				</TuaneParagraph>
 			</TuaneInfoSection>
+
+			<div className='divider'></div>
 
 			<TuaneInfoSection
 				sectionName='Sobre a clínica'
 				title='Local especializado no seu atendimento'
+				about='Apresentação sobre a clínica em que a Dra Tuane Cássia trabalha'
 				reverse
 				verifiedTopics={[
 					'Procedimentos faciais para tratar todas as camadas da sua pele, nossa abordagem cuidadosa e técnica refinada garantem um resultado natural, elegante e harmônico;',
@@ -58,7 +63,12 @@ export default function Home() {
 				</TuaneParagraph>
 			</TuaneInfoSection>
 
-			<TuaneCarousel cards={tuaneServices} options={{ align: 'start' }} />
+			<TuaneCarousel
+				title='Procedimentos'
+				about='Procedimentos'
+				cards={tuaneServices}
+				options={{ align: 'start' }}
+			/>
 
 			<TuaneInstaIframe />
 		</div>
