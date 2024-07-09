@@ -1,5 +1,5 @@
 import { TuaneRoutes } from 'lib';
-import { TuaneLinks } from 'lib/links';
+import { TuaneLinks, whatsLinkWithMessage } from 'lib/links';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -30,7 +30,7 @@ export default function TuaneFooter() {
 					<Link href={TuaneLinks.INSTAGRAM} target='_blank'>
 						<FaInstagram />
 					</Link>
-					<Link href={TuaneLinks.WHATSAPP} target='_blank'>
+					<Link href={whatsLinkWithMessage()} target='_blank'>
 						<FaWhatsapp />
 					</Link>
 				</div>

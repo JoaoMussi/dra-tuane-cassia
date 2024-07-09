@@ -2,13 +2,18 @@
 
 import { mansoryMedium } from 'app/styles/fonts';
 import TuaneButton from 'components/button/button';
-import { TuaneLinks, TuaneRoutes } from 'lib';
+import {
+	TuaneLinks,
+	TuaneRoutes,
+	WhatsMessages,
+	whatsLinkWithMessage,
+} from 'lib';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { FaWhatsapp } from 'react-icons/fa';
 import { GoClock } from 'react-icons/go';
 import { HiBars3 } from 'react-icons/hi2';
-import { SlPhone } from 'react-icons/sl';
 
 export default function TuaneNavBar() {
 	const pathname = usePathname();
@@ -56,18 +61,24 @@ export default function TuaneNavBar() {
 							</div>
 						</div>
 
-						<div className='hidden sm:flex items-center text-sm gap-3'>
-							<SlPhone className='text-2xl text-primary' />
-							<div className='text-xs text-gray-500'>
+						<Link
+							href={whatsLinkWithMessage(WhatsMessages.GENERIC)}
+							target='_blank'
+							className='hidden sm:flex items-center text-sm gap-3'>
+							<FaWhatsapp className='text-2xl text-primary' />
+
+							<div className='link text-xs text-gray-500'>
 								<p className={`${mansoryMedium.className}`}>
 									Fale conosco!
 								</p>
 								<p>(47) 99669-9607</p>
 							</div>
-						</div>
+						</Link>
 						<div className='hidden sm:block'>
 							<TuaneButton
-								href={TuaneLinks.WHATSAPP}
+								href={whatsLinkWithMessage(
+									WhatsMessages.APPOINTMENT
+								)}
 								externalLink
 								showArrow={false}>
 								Agendar avaliação

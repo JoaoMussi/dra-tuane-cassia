@@ -1,5 +1,5 @@
 import { TuaneButton } from 'components';
-import { TuaneLinks } from 'lib';
+import { WhatsMessages, whatsLinkWithMessage } from 'lib';
 import Image from 'next/image';
 
 export default function TuaneHeroSection() {
@@ -23,7 +23,9 @@ export default function TuaneHeroSection() {
 					</p>
 					<div>
 						<TuaneButton
-							href={TuaneLinks.WHATSAPP}
+							href={whatsLinkWithMessage(
+								WhatsMessages.APPOINTMENT
+							)}
 							outline={false}
 							externalLink>
 							Agende uma avaliação
