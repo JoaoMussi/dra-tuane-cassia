@@ -1,5 +1,5 @@
-import { mansory } from 'app/styles/fonts';
 import TuaneButton from 'components/button/button';
+import TuaneSectionHeader from 'components/section-header/section-header';
 import { NextImageAttrs } from 'interfaces';
 import Image from 'next/image';
 import { FaCircleCheck } from 'react-icons/fa6';
@@ -38,10 +38,9 @@ export default function TuaneInfoSection({
 						: 'flex-col md:flex-row'
 				}`}>
 				<div className='flex flex-col gap-5'>
-					<hgroup className={`${mansory.className}`}>
-						<h2 className='text-primary'>{sectionName}</h2>
-						<p className='text-4xl'>{title}</p>
-					</hgroup>
+					<TuaneSectionHeader
+						sectionName={sectionName}
+						title={title}></TuaneSectionHeader>
 
 					{children}
 

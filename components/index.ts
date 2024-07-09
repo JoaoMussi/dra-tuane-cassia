@@ -6,3 +6,4 @@ export { default as TuaneFooter } from './footer/footer';
 export { default as TuaneInfoSection } from './info-section/info-section';
 export { default as TuaneNavBar } from './navbar/navbar';
 export { default as TuaneParagraph } from './paragraph/paragraph';
+export { default as TuaneSectionHeader } from './section-header/section-header';
