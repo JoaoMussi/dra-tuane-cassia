@@ -2,28 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-section.regular-width {
+.regular-width {
 	width: 80%;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-section.big-width {
+.big-width {
 	width: 100%;
 }
 
 .divider {
 	width: 50%;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media (min-width: 750px) {
-	section.regular-width {
+	.regular-width {
 		width: 60%;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	section.big-width {
+	.big-width {
 		width: 80%;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
