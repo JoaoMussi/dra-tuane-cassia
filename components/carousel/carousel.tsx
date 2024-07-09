@@ -6,11 +6,12 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { usePrevNextButtons } from './arrow-buttons/arrow-buttons';
 import styles from './carousel.module.css';
 
+import { mansory } from 'app/styles/fonts';
 import { CardProps } from 'interfaces/card-props';
+import { WhatsMessages, whatsLinkWithMessage } from 'lib';
 import NextButton from './arrow-buttons/next-button';
 import PrevButton from './arrow-buttons/prev-button';
 import DotButton, { useDotButton } from './dot-button';
-import { mansory } from 'app/styles/fonts';
 
 export default function TuaneCarousel({
 	title,
@@ -52,7 +53,13 @@ export default function TuaneCarousel({
 								description={card.description}
 								actions={
 									card.hideAction ? undefined : (
-										<TuaneButton showArrow>
+										<TuaneButton
+											showArrow
+											href={whatsLinkWithMessage(
+												WhatsMessages.KNOW_MORE_SERVICE,
+												card.title
+											)}
+											externalLink>
 											Saiba mais
 										</TuaneButton>
 									)

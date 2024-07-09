@@ -2,11 +2,10 @@ import { CardProps } from 'interfaces';
 
 export const tuaneServices: CardProps[] = [
 	{
-		title: 'Toxina Botulínica',
+		title: 'Toxina botulínica',
 		description:
 			'Popularmente conhecida como Botox®, esse procedimento promove o relaxamento da musculatura da face e do pescoço melhorando o aspecto das rugas e linhas de expressão.',
 		imageAttrs: { src: '/images/botox.jpeg', alt: 'Aplicação de botox' },
-		hideAction: true,
 	},
 	{
 		title: 'Preenchimento com ácido hialurônico',
@@ -16,7 +15,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/filler.jpeg',
 			alt: 'Apresentação de boca com preenchimento',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'Bioestimuladores de colágeno',
@@ -26,7 +24,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/colagen.jpeg',
 			alt: 'Efeitos do colágeno sendo apresentados na foto',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'Microagulhamento',
@@ -36,7 +33,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/microneedle.jpeg',
 			alt: 'Microagulhamento aplicado em uma mulher',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'Peeling químico',
@@ -46,7 +42,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/peeling.jpeg',
 			alt: 'Peeling sendo aplicado em uma mulher',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'Protocolos para emagrecimento',
@@ -56,7 +51,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/skinner.jpeg',
 			alt: 'Mulher mostrando gordura localizada no próprio corpo',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'Lipo de papada enzimática',
@@ -66,7 +60,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/papada.jpeg',
 			alt: 'Fotos comparativas com resultados da enzima de papada',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'PEIM: Procedimento Estético Injetável para Microvasos',
@@ -76,7 +69,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/microneedle.jpeg',
 			alt: 'Mulher mostrando alguns microvasos na perna',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'Skinbooster',
@@ -86,7 +78,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/woman-with-face-lotion.png',
 			alt: 'Mulher mostrando o skinbooster na pele',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'Tratamentos  capilares',
@@ -96,7 +87,6 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/capilar.jpeg',
 			alt: 'Homem aplicando enzimas no cabelo',
 		},
-		hideAction: true,
 	},
 	{
 		title: 'Limpeza de pele',
@@ -106,6 +96,5 @@ export const tuaneServices: CardProps[] = [
 			src: '/images/limpeza.jpeg',
 			alt: 'Mulher realizando limpeza de pele',
 		},
-		hideAction: true,
 	},
 ];
