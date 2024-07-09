@@ -15,6 +15,7 @@ export default function TuaneButton({
 	showArrow = true,
 	children,
 	href,
+	externalLink = false,
 	onClick,
 }: TuaneButtonProps) {
 	let buttonElement = (
@@ -43,7 +44,11 @@ export default function TuaneButton({
 	);
 
 	if (href) {
-		buttonElement = <Link href={href}>{buttonElement}</Link>;
+		buttonElement = (
+			<Link href={href} target={externalLink ? '_blank' : '_self'}>
+				{buttonElement}
+			</Link>
+		);
 	}
 
 	return buttonElement;
