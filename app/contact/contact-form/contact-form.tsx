@@ -2,16 +2,20 @@
 
 import { InputMask } from '@react-input/mask';
 import { TuaneSectionHeader } from 'components';
+import { tuaneServices } from 'lib';
+import Multiselect from 'multiselect-react-dropdown';
+import { useState } from 'react';
 
 export default function TuaneContactForm() {
 	const modify = (input: string) => ({
 		mask: input.length > 10 ? '(__) _____-____' : '(__) ____-_____',
 	});
+	const [selected, setSelected] = useState([]);
 
 	return (
 		<section
 			about='Formulário para contatar a Dra Tuane Cássia'
-			className={`w-full flex flex-col gap-5`}>
+			className={`max-w-[50%] flex flex-col gap-5`}>
 			<TuaneSectionHeader
 				title='Informações para contato'
 				sectionName='Contato'></TuaneSectionHeader>
@@ -37,14 +41,24 @@ export default function TuaneContactForm() {
 					replacement={{ _: /\d/ }}></InputMask>
 			</label>
 
-			<label className='form-control w-full'>
+			<label htmlFor='services' className='w-full'>
 				<span className='label label-text'>
 					Quais procedimentos lhe interessam?
 				</span>
-				<input
-					type='text'
-					placeholder='Selecione um ou mais procedimentos'
-					className='input input-bordered input-ghost w-full'
+				<Multiselect
+					id='services'
+					className='w-full'
+					options={tuaneServices.map(({ title }, index) => ({
+						id: index + 1,
+						name: title,
+					}))}
+					selectedValues={selected}
+					onSelect={setSelected}
+					onRemove={setSelected}
+					displayValue='name'
+					avoidHighlightFirstOption
+					placeholder='Selecione'
+					showArrow
 				/>
 			</label>
 
