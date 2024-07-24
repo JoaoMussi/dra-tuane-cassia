@@ -50,24 +50,33 @@ export default function TuaneNavBar() {
 					</TuaneButton>
 				</div>
 				<div className='flex sm:items-end flex-col sm:pt-3 pr-3'>
-					<div className='flex gap-5'>
-						<div className='hidden sm:flex items-center text-sm gap-3'>
+					<div className='flex gap-3'>
+						<div className='hidden sm:flex bg-primary-content shadow rounded-md px-3 items-center whitespace-nowrap text-sm gap-3'>
 							<GoClock className='text-2xl text-primary' />
-							<div className='text-xs text-gray-500'>
-								<p className={`${mansoryMedium.className}`}>
-									Segunda - Sábado
-								</p>
-								<p>9h às 20h</p>
+							<div className='flex gap-3'>
+								<div className='text-xs text-gray-500'>
+									<p className={`${mansoryMedium.className}`}>
+										Segunda - Sexta
+									</p>
+									<p>9h às 20h</p>
+								</div>
+								<div className='divider divider-horizontal'></div>
+								<div className='text-xs text-gray-500'>
+									<p className={`${mansoryMedium.className}`}>
+										Sábado
+									</p>
+									<p>9h às 12h</p>
+								</div>
 							</div>
 						</div>
 
 						<Link
 							href={whatsLinkWithMessage(WhatsMessages.GENERIC)}
 							target='_blank'
-							className='hidden sm:flex items-center text-sm gap-3'>
+							className='hidden sm:flex bg-primary-content shadow rounded-md px-3 items-center text-sm gap-3'>
 							<FaWhatsapp className='text-2xl text-primary' />
 
-							<div className='link text-xs text-gray-500'>
+							<div className='text-xs text-gray-500'>
 								<p className={`${mansoryMedium.className}`}>
 									Fale conosco!
 								</p>
