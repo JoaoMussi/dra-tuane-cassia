@@ -66,7 +66,7 @@ export const tuaneServices: CardProps[] = [
 		description:
 			'Afina os microvasos e elimina gradativamente o aspecto de varizes.',
 		imageAttrs: {
-			src: '/images/microneedle.jpeg',
+			src: '/images/microvasos.jpg',
 			alt: 'Mulher mostrando alguns microvasos na perna',
 		},
 	},
