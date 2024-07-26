@@ -8,7 +8,7 @@ export default function TuaneSectionHeader({
 	title: string;
 }) {
 	return (
-		<hgroup className={`${mansory.className}`}>
+		<hgroup className={`${mansory.className} my-8`}>
 			<h2 className='text-primary'>{sectionName}</h2>
 			<p className='text-4xl'>{title}</p>
 		</hgroup>

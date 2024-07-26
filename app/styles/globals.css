@@ -18,16 +18,22 @@
 	margin-right: auto;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 768px) {
 	.regular-width {
-		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
+		width: 768px;
 	}
 
 	.big-width {
 		width: 80%;
-		margin-left: auto;
-		margin-right: auto;
+	}
+}
+
+@media (min-width: 1024px) {
+	.regular-width {
+		width: 1024px;
+	}
+
+	.big-width {
+		width: 80%;
 	}
 }

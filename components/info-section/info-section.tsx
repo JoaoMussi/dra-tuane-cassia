@@ -32,12 +32,12 @@ export default function TuaneInfoSection({
 			about={about}
 			className={regularWidth ? 'regular-width' : undefined}>
 			<div
-				className={`flex items-center gap-8 md:gap-44 my-8 ${
+				className={`flex items-center gap-8 md:gap-44 ${
 					reverse
 						? 'flex-col-reverse md:flex-row-reverse'
 						: 'flex-col md:flex-row'
 				}`}>
-				<div className='flex flex-col gap-5'>
+				<div className='flex flex-col gap-5 w-full items-center'>
 					<TuaneSectionHeader
 						sectionName={sectionName}
 						title={title}></TuaneSectionHeader>

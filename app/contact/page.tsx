@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
 	return (
-		<div className='regular-width flex justify-between gap-40 mt-40'>
+		<div className='regular-width flex flex-col lg:flex-row justify-between gap-10 lg:gap-40 mt-40 mb-10'>
 			<TuaneContactForm></TuaneContactForm>
 			<TuaneAddress></TuaneAddress>
 		</div>
