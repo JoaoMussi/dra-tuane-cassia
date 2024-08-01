@@ -4,9 +4,9 @@ import { FaInstagram } from 'react-icons/fa';
 
 export default function TuaneInstaIframe() {
 	return (
-		<div className='hidden md:flex flex-col items-center bg-black'>
-			<div className='py-2 flex items-center gap-8'>
-				<p className='text-white'>@dra.tuanecassia</p>
+		<div className='flex flex-col items-center bg-black'>
+			<div className='p-2 flex flex-col md:flex-row items-center gap-2 md:gap-8'>
+				<p className='py-2 text-white'>@dra.tuanecassia</p>
 				<Link
 					role='button'
 					href={TuaneLinks.INSTAGRAM}
@@ -16,12 +16,21 @@ export default function TuaneInstaIframe() {
 					Visitar perfil
 				</Link>
 			</div>
+			<script src='https://snapwidget.com/js/snapwidget.js'></script>
 			<iframe
-				referrerPolicy='origin'
 				src='https://snapwidget.com/embed/1070254'
-				className='md:max-lg:h-[256px] md:max-xl:h-[341px] md:max-2xl:h-[480px] md:h-[635px]'
-				title='Posts from Instagram'
-				width={'100%'}></iframe>
+				className='snapwidget-widget pointer-events-none md:hidden'
+				style={{
+					border: 'none',
+					overflow: 'hidden',
+					width: '100%',
+				}}
+				title='Posts from Instagram'></iframe>
+			<iframe
+				src='https://snapwidget.com/embed/1074808'
+				className='snapwidget-widget hidden pointer-events-none md:block md:max-lg:h-[256px] md:max-xl:h-[341px] md:max-2xl:h-[480px] md:h-[635px]'
+				style={{ border: 'none', overflow: 'hidden', width: '100%' }}
+				title='Posts from Instagram'></iframe>
 		</div>
 	);
 }
