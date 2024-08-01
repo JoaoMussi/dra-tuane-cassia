@@ -7,12 +7,31 @@ import { tuaneServices } from 'lib';
 import Multiselect from 'multiselect-react-dropdown';
 import { FormEvent, createRef, useState } from 'react';
 
+const alertMessages = new Map<string, { message: string; icon: string }>([
+	[
+		'error',
+		{
+			message: 'Erro ao enviar mensagem. Por favor, tente novamente.',
+			icon: 'M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z',
+		},
+	],
+	[
+		'success',
+		{
+			message:
+				'Mensagem enviada para a Dra. Tuane! Assim que possível, ela entrará em contato pelo seu WhatsApp.',
+			icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+		},
+	],
+]);
+
 export default function TuaneContactForm() {
 	const modify = (input: string) => ({
 		mask: input.length > 10 ? '(__) _____-____' : '(__) ____-_____',
 	});
 	const [selected, setSelected] = useState([]);
 	const [sending, setSending] = useState(false);
+	const [messageType, setMessageType] = useState('');
 
 	const multiselectRef = createRef<Multiselect>();
 
@@ -34,26 +53,25 @@ export default function TuaneContactForm() {
 			message: event.currentTarget['message'].value,
 		};
 
-		await emailjs
-			.send(
-				process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID as string,
-				process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID as string,
-				formParams,
-				{
-					publicKey: process.env
-						.NEXT_PUBLIC_EMAIL_PUBLIC_KEY as string,
-				}
-			)
-			.then(
-				() => {
-					console.log('success');
+		try {
+			await emailjs
+				.send(
+					process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID as string,
+					process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID as string,
+					formParams,
+					{
+						publicKey: process.env
+							.NEXT_PUBLIC_EMAIL_PUBLIC_KEY as string,
+					}
+				)
+				.then(() => {
+					setMessageType('success');
 					setSending(false);
-				},
-				error => {
-					console.log('error', error);
-					setSending(false);
-				}
-			);
+				});
+		} catch (error) {
+			setMessageType('error');
+			setSending(false);
+		}
 	}
 
 	return (
@@ -130,6 +148,24 @@ export default function TuaneContactForm() {
 					Enviar
 				</TuaneButton>
 			</form>
+
+			{messageType ? (
+				<div role='alert' className={`alert alert-${messageType}`}>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						className='h-6 w-6 shrink-0 stroke-current'
+						fill='none'
+						viewBox='0 0 24 24'>
+						<path
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							strokeWidth='2'
+							d={alertMessages.get(messageType)?.icon}
+						/>
+					</svg>
+					<span>{alertMessages.get(messageType)?.message}</span>
+				</div>
+			) : null}
 		</section>
 	);
 }
