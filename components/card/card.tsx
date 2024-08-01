@@ -8,11 +8,12 @@ export default function TuaneCard({
 	actions,
 }: CardProps) {
 	return (
-		<div className='card my-2 w-80 h-full shadow-outer overflow-hidden'>
+		<div className='card my-2 card-compact md:card-normal md:w-80 h-full shadow-outer overflow-hidden'>
 			{imageAttrs ? (
 				<Image
 					width={imageAttrs.width ?? 325}
 					height={imageAttrs.height ?? 200}
+					style={{ maxWidth: '100%' }}
 					src={imageAttrs.src}
 					alt={imageAttrs.alt}
 				/>

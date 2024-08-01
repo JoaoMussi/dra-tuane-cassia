@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 .regular-width {
-	width: 80%;
+	width: 600px;
+	max-width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .big-width {
-	width: 100%;
+	width: 90%;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .divider {
@@ -20,20 +24,20 @@
 
 @media (min-width: 768px) {
 	.regular-width {
-		width: 768px;
+		width: 700px;
 	}
 
 	.big-width {
-		width: 80%;
+		width: 90%;
 	}
 }
 
 @media (min-width: 1024px) {
 	.regular-width {
-		width: 1024px;
+		width: 1000px;
 	}
 
 	.big-width {
-		width: 80%;
+		width: 1200px;
 	}
 }

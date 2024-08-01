@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 export default function TuaneFooter() {
 	return (
-		<footer className='footer space-x-10 place-content-center justify-around py-10 bg-neutral text-neutral-content items-center'>
+		<footer className='footer justify-around py-10 bg-neutral text-neutral-content'>
 			<aside className='h-full items-center'>
 				<Image
 					src='/logos/logotipo-com-icone-bege.png'
@@ -14,14 +14,18 @@ export default function TuaneFooter() {
 					width={300}
 					height={200}></Image>
 			</aside>
-			<nav>
+			<nav className='mx-auto'>
 				<h6 className='footer-title'>Páginas</h6>
-				<Link href={TuaneRoutes.HOME}>Página inicial</Link>
-				{/* <Link href={TuaneRoutes.SERVICES}>Procedimentos</Link>
-				<Link href={TuaneRoutes.ABOUT_ME}>Sobre mim</Link> */}
-				<Link href={TuaneRoutes.CONTACT}>Contato</Link>
+				<Link className='link' href={TuaneRoutes.HOME}>
+					Página inicial
+				</Link>
+				{/* <Link className='link' href={TuaneRoutes.SERVICES}>Procedimentos</Link>
+				<Link className='link' href={TuaneRoutes.ABOUT_ME}>Sobre mim</Link> */}
+				<Link className='link' href={TuaneRoutes.CONTACT}>
+					Contato
+				</Link>
 			</nav>
-			<nav>
+			<nav className='mx-auto'>
 				<h6 className='footer-title'>Redes sociais</h6>
 				<div className='grid grid-flow-col gap-4 text-4xl'>
 					<Link href={TuaneLinks.FACEBOOK} target='_blank'>
