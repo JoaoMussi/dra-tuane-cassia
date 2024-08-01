@@ -37,7 +37,7 @@ export const tuaneServices: CardProps[] = [
 	{
 		title: 'Peeling químico',
 		description:
-			'Estimula a renovação da pele e pode entregar uma pele mais jovial e até remover manchas profundas',
+			'Estimula a renovação da pele e entrega uma pele mais jovial e até remover manchas profundas',
 		imageAttrs: {
 			src: '/images/peeling.jpeg',
 			alt: 'Peeling sendo aplicado em uma mulher',

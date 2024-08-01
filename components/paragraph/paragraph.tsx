@@ -3,7 +3,5 @@ export default function TuaneParagraph({
 }: {
 	children: React.ReactNode;
 }) {
-	return (
-		<p className='text-regular-p text-justify antialiased'>{children}</p>
-	);
+	return <p className='text-regular-p antialiased'>{children}</p>;
 }
