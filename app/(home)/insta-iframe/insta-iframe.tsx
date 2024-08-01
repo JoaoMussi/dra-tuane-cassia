@@ -1,5 +1,6 @@
 import { TuaneLinks } from 'lib/links';
 import Link from 'next/link';
+import Script from 'next/script';
 import { FaInstagram } from 'react-icons/fa';
 
 export default function TuaneInstaIframe() {
@@ -16,7 +17,7 @@ export default function TuaneInstaIframe() {
 					Visitar perfil
 				</Link>
 			</div>
-			<script src='https://snapwidget.com/js/snapwidget.js'></script>
+			<Script src='https://snapwidget.com/js/snapwidget.js'></Script>
 			<iframe
 				src='https://snapwidget.com/embed/1070254'
 				className='snapwidget-widget pointer-events-none md:hidden'
