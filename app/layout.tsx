@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { TuaneFooter, TuaneNavBar } from 'components';
 import type { Metadata } from 'next';
 import { montserrat } from './styles/fonts';
@@ -25,6 +26,7 @@ export default function RootLayout({
 				<div className='flex-1'>{children}</div>
 				<TuaneFooter />
 			</body>
+			<GoogleAnalytics gaId='G-83E4PVFDZ4' />
 		</html>
 	);
 }
