@@ -3,10 +3,10 @@
 Instale todas as dependências
 
 ```bash
-npm run dev
+npm install
 ```
 
-Então suba o projeto em sua máquina
+Suba o projeto em sua máquina
 
 ```bash
 npm run dev
