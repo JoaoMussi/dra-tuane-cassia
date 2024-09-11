@@ -8,13 +8,15 @@ export default function TuaneAddress() {
 			about='Endereço da Clinica Integrada Dukeze'
 			sectionName='Endereço'
 			regularWidth={false}>
-			<TuaneParagraph>
-				<span className='text-md font-bold'>
-					Clínica integrada Dukeze
-				</span>
-				<br />
-				Rua Emílio Artmann, 130 Bairro América, Joinville/SC
-			</TuaneParagraph>
+			<div className='mx-8'>
+				<TuaneParagraph>
+					<span className='text-md font-bold'>
+						Clínica integrada Dukeze
+					</span>
+					<br />
+					Rua Emílio Artmann, 130 Bairro América, Joinville/SC
+				</TuaneParagraph>
+			</div>
 			<iframe
 				title='Endereço da Clinica Integrada Dukeze'
 				width='450'
