@@ -23,10 +23,10 @@ export default function Home() {
 					width: 300,
 				}}>
 				<TuaneParagraph>
-					Olá! Sou a Dra. Tuane Cássia e sou biomédica esteta e
-					patologista clínica. Me formei na faculdade de biomedicina
-					pela Católica de Santa Catarina em 2020, onde também
-					realizei minha pós graduação em estética avançada.
+					Olá! Sou a Dra. Tuane Cássia, biomédica esteta e patologista
+					clínica. Me formei na faculdade de biomedicina pela Católica
+					de Santa Catarina em 2020, onde também realizei minha pós
+					graduação em estética avançada.
 				</TuaneParagraph>
 				<TuaneParagraph>
 					Meu objetivo como profissional é{' '}
