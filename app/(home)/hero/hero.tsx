@@ -19,7 +19,7 @@ export default function TuaneHeroSection() {
 						height={300}></Image>
 					<h1 className='hidden'>Dra. Tuane Cássia</h1>
 					<p className='m-5 text-lg'>
-						Realce sua beleza com naturalidade.
+						Revele sua melhor versão sem perder a sua essência.
 					</p>
 					<div>
 						<TuaneButton
