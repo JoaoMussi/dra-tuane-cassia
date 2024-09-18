@@ -37,7 +37,7 @@ export default function TuaneInfoSection({
 						? 'flex-col-reverse md:flex-row-reverse'
 						: 'flex-col md:flex-row'
 				}`}>
-				<div className='flex flex-col gap-5 w-full items-center'>
+				<div className='flex flex-col gap-5 w-full'>
 					<TuaneSectionHeader
 						sectionName={sectionName}
 						title={title}></TuaneSectionHeader>
