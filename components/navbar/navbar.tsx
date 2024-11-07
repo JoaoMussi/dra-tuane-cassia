@@ -22,8 +22,15 @@ export default function TuaneNavBar() {
 		return pathname === route ? 'link-primary' : 'link-hover';
 	}
 
+	function hideNavbar(): boolean {
+		return pathname.includes('/landing-pages');
+	}
+
 	return (
-		<div className='w-full z-[100] p-3 fixed subpixel-antialiased'>
+		<div
+			className={`${
+				hideNavbar() ? 'hidden' : ''
+			} w-full z-[100] p-3 fixed subpixel-antialiased`}>
 			<div className='flex items-center justify-between m-auto gap-3 pl-6 bg-base-100 py-3 sm:py-0 lg:w-[1024px] rounded-md'>
 				<div>
 					<Link href={'/'}>
