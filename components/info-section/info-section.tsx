@@ -13,6 +13,7 @@ export default function TuaneInfoSection({
 	verifiedTopics,
 	buttonLabel,
 	buttonHref,
+	buttonExternalLink = false,
 	regularWidth = true,
 	children,
 }: {
@@ -24,6 +25,7 @@ export default function TuaneInfoSection({
 	verifiedTopics?: string[];
 	buttonLabel?: string;
 	buttonHref?: string;
+	buttonExternalLink?: boolean;
 	regularWidth?: boolean;
 	children: React.ReactNode;
 }) {
@@ -56,7 +58,9 @@ export default function TuaneInfoSection({
 					</div>
 					{buttonLabel && (
 						<div className='w-full flex flex-col items-center'>
-							<TuaneButton href={buttonHref}>
+							<TuaneButton
+								href={buttonHref}
+								externalLink={buttonExternalLink}>
 								{buttonLabel}
 							</TuaneButton>
 						</div>
