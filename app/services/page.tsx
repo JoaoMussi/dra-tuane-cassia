@@ -1,3 +1,5 @@
+import { TuaneCarousel } from 'components';
+import { tuaneServices } from 'lib';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -5,5 +7,14 @@ export const metadata: Metadata = {
 };
 
 export default function Services() {
-	return <h1>Services!</h1>;
+	return (
+		<div className='mt-40 mb-8'>
+			<TuaneCarousel
+				title='Procedimentos'
+				about='Procedimentos'
+				cards={tuaneServices}
+				options={{ align: 'start' }}
+			/>
+		</div>
+	);
 }
