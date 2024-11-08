@@ -18,11 +18,13 @@ export default function TuaneCarousel({
 	about,
 	cards,
 	options,
+	fullWidthCards,
 }: {
 	title: string;
 	about: string;
 	cards: CardProps[];
 	options: EmblaOptionsType;
+	fullWidthCards?: boolean;
 }) {
 	const [emblaRef, emblaApi] = useEmblaCarousel(options);
 	const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
@@ -44,13 +46,20 @@ export default function TuaneCarousel({
 			<div
 				className={`card shadow-inner-xl ${styles.embla} ${styles.embla__viewport}`}
 				ref={emblaRef}>
-				<div className={styles.embla__container}>
+				<div className={styles.embla__container + ' items-center'}>
 					{cards.map((card, index) => (
-						<div className={styles.embla__slide} key={index}>
+						<div
+							className={
+								fullWidthCards
+									? styles.embla__slide_full_width
+									: styles.embla__slide + ' '
+							}
+							key={index}>
 							<TuaneCard
 								title={card.title}
 								imageAttrs={card.imageAttrs}
 								description={card.description}
+								fullWidth={fullWidthCards}
 								actions={
 									card.hideAction ? undefined : (
 										<TuaneButton

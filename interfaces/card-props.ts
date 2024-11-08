@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import { NextImageAttrs } from "./image-attributes";
+import { ReactElement } from 'react';
+import { NextImageAttrs } from './image-attributes';
 
 export interface CardProps {
 	title: string;
@@ -7,4 +7,5 @@ export interface CardProps {
 	imageAttrs?: NextImageAttrs;
 	actions?: ReactElement;
 	hideAction?: boolean;
+	fullWidth?: boolean;
 }

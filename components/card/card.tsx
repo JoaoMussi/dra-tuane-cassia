@@ -6,22 +6,29 @@ export default function TuaneCard({
 	description,
 	imageAttrs,
 	actions,
+	fullWidth,
 }: CardProps) {
 	return (
-		<div className='card my-2 card-compact md:card-normal md:w-80 h-full shadow-outer overflow-hidden'>
+		<div
+			className={`card my-2 card-compact md:card-normal ${
+				fullWidth ? 'md-w-full' : 'md:w-80'
+			} shadow-outer overflow-hidden`}>
 			{imageAttrs ? (
 				<Image
+					unoptimized={true}
 					width={imageAttrs.width ?? 325}
 					height={imageAttrs.height ?? 200}
-					style={{ maxWidth: '100%' }}
+					style={{ maxWidth: '100%', width: '100%' }}
 					src={imageAttrs.src}
 					alt={imageAttrs.alt}
 				/>
 			) : null}
 			<div className='card-body flex justify-between text-center space-y-2'>
 				<h3 className='card-title justify-center'>{title}</h3>
-				<p className='text-regular-p'>{description}</p>
-				<div className='card-actions justify-center'>{actions}</div>
+				{description && <p className='text-regular-p'>{description}</p>}
+				{actions && (
+					<div className='card-actions justify-center'>{actions}</div>
+				)}
 			</div>
 		</div>
 	);

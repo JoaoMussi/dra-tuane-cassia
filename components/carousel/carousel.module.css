@@ -5,7 +5,6 @@
 .embla {
 	margin: 1rem auto;
 	padding: 1rem 2rem;
-	--slide-height: 19rem;
 	--slide-spacing: 1rem;
 	--slide-size: 100%;
 	--slide-spacing-sm: 1.6rem;
@@ -53,6 +52,25 @@
 @media (min-width: 1200px) {
 	.embla__slide {
 		flex: 0 0 auto;
+		padding-left: var(--slide-spacing-lg);
+	}
+}
+
+.embla__slide_full_width {
+	min-width: 0;
+	flex: 0 0 100%;
+	max-width: 100%;
+	padding-left: var(--slide-spacing);
+}
+@media (min-width: 750px) {
+	.embla__slide_full_width {
+		flex: 0 0 100%;
+		padding-left: var(--slide-spacing-sm);
+	}
+}
+@media (min-width: 1200px) {
+	.embla__slide_full_width {
+		flex: 0 0 100%;
 		padding-left: var(--slide-spacing-lg);
 	}
 }
