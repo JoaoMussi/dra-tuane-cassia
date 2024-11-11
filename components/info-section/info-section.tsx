@@ -68,6 +68,7 @@ export default function TuaneInfoSection({
 				</div>
 				{image && (
 					<Image
+						unoptimized={true}
 						src={image.src}
 						alt={image.alt}
 						width={image.width ?? 250}
