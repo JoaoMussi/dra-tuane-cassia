@@ -4,6 +4,7 @@ export enum WhatsMessages {
 	GENERIC,
 	APPOINTMENT,
 	KNOW_MORE_SERVICE,
+	LP_BOTOX,
 }
 
 const getBuiltMessage = (messageType: WhatsMessages, param?: string) => {
@@ -19,6 +20,10 @@ const getBuiltMessage = (messageType: WhatsMessages, param?: string) => {
 		[
 			WhatsMessages.KNOW_MORE_SERVICE,
 			`Olá! Estava navegando pelo site e gostaria de saber mais sobre ${param}.`,
+		],
+		[
+			WhatsMessages.LP_BOTOX,
+			`Oi, Dra. Tuane! Vi os resultados de botox no seu site e me apaixonei! Gostaria de agendar uma avaliação para conversarmos sobre como o botox pode me ajudar.`,
 		],
 	]);
 
