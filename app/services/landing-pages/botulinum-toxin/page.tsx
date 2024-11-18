@@ -1,16 +1,37 @@
-import { TuaneCarousel, TuaneInfoSection, TuaneParagraph } from 'components';
+import { TuaneInfoSection, TuaneParagraph } from 'components';
 import { whatsLinkWithMessage, WhatsMessages } from 'lib';
+import Image from 'next/image';
 import TuaneLandingPagesHero from '../landing-pages-hero';
-import { toxinTestimonials } from './toxin-testimonials';
 
 export default function Page() {
+	const testimonials = [
+		'/images/testimonials/depo0.jpg',
+		'/images/testimonials/depo1.jpg',
+		'/images/testimonials/depo2.jpg',
+		'/images/testimonials/depo3.jpg',
+		'/images/testimonials/depo4.jpg',
+	];
+	const results = [
+		'/images/results/result4.jpg',
+		'/images/results/result5.jpg',
+		'/images/results/result7.jpg',
+		'/images/results/result0.jpg',
+		'/images/results/result3.jpg',
+		'/images/results/result8.jpg',
+		'/images/results/result9.jpg',
+		'/images/results/result11.jpg',
+		'/images/results/result12.jpg',
+		'/images/results/result13.jpg',
+		'/images/results/result14.jpg',
+	];
+
 	return (
-		<div className='space-y-32 mb-8'>
+		<div className='space-y-12 mb-8'>
 			<TuaneLandingPagesHero></TuaneLandingPagesHero>
 			<TuaneInfoSection
 				sectionName='Seu rosto mais jovem em poucos dias'
 				title='Sinta-se bem com uma pele mais lisa e jovem, sem exageros.'
-				about='Descrição sobre como a Dra. Tuane Cássia pode solucionar suas rugas e imperfeições faciais através do botox'
+				about='Descrição sobre como a Dra. Tuane Cássia pode solucionar suas rugas e imperfeições faciais através da toxina butolínica'
 				reverse
 				verifiedTopics={[
 					'Redução de rugas e linhas de expressão',
@@ -18,20 +39,21 @@ export default function Page() {
 					'Procedimento rápido e não evasivo',
 				]}
 				image={{
-					src: '/images/half-woman-smiling.jpg',
+					src: '/images/tuane-showing-face.jpg',
 					alt: 'Foto de metade do rosto de uma mulher mostrando seu rosto',
-					width: 150,
 				}}>
 				<TuaneParagraph>
 					As rugas e marcas de expressão são sinais naturais do tempo,
 					mas elas não precisam definir como você se vê no espelho.
-					Com o botox, você pode suavizar essas linhas sem perder a
-					identidade do seu rosto. No meu consultório em Joinville,
-					cada atendimento é exclusivo e pensado para realçar sua
-					beleza de forma sutil, garantindo que seus traços únicos
-					sejam preservados.
+					Com a toxina butolínica, você pode suavizar essas linhas sem
+					perder a identidade do seu rosto. No meu consultório em
+					Joinville, cada atendimento é exclusivo e pensado para
+					realçar sua beleza de forma sutil, garantindo que seus
+					traços únicos sejam preservados.
 				</TuaneParagraph>
 			</TuaneInfoSection>
+
+			<div className='divider'></div>
 
 			<TuaneInfoSection
 				sectionName='Profissionalismo que garante sua confiança'
@@ -51,15 +73,47 @@ export default function Page() {
 				</TuaneParagraph>
 			</TuaneInfoSection>
 
-			<div className='big-width m-auto'>
-				<TuaneCarousel
-					title='Depoimentos'
-					about='Confira alguns dos depoimentos deixados pelas pacientes que fizeram botox com a Dra. Tuane.'
-					cards={toxinTestimonials}
-					fullWidthCards
-					options={{ align: 'start' }}
-				/>
-			</div>
+			<div className='divider'></div>
+
+			<TuaneInfoSection
+				sectionName='Um atendimento atencioso e exclusivo'
+				title='Depoimentos'
+				about='Sessão com depoimentos de pacientes'>
+				<div className='w-100 m-auto grid md:grid-cols-3 grid-flow-row-dense gap-5'>
+					{testimonials.map(fileSrc => (
+						<figure>
+							<Image
+								src={fileSrc}
+								alt='Depoimento'
+								width={300}
+								height={300}
+							/>
+						</figure>
+					))}
+				</div>
+			</TuaneInfoSection>
+
+			<div className='divider'></div>
+
+			<TuaneInfoSection
+				sectionName='Confira você mesmo'
+				title='Resultados'
+				about='Sessão com resultados de pacientes'>
+				<div className='w-100 m-auto grid md:grid-cols-3 grid-flow-row-dense gap-5'>
+					{results.map(fileSrc => (
+						<figure>
+							<Image
+								src={fileSrc}
+								alt='Resultado'
+								width={300}
+								height={300}
+							/>
+						</figure>
+					))}
+				</div>
+			</TuaneInfoSection>
+
+			<div className='divider'></div>
 
 			<TuaneInfoSection
 				sectionName='Não perca seu desconto!'
@@ -75,19 +129,21 @@ export default function Page() {
 				</TuaneParagraph>
 			</TuaneInfoSection>
 
+			<div className='divider'></div>
+
 			<TuaneInfoSection
-				sectionName='Mais do que Botox'
+				sectionName='Mais do que apenas um procedimento'
 				title='Harmonização Facial Natural e Elegante'
-				about='Informativo sobre a possibilidade de realização de pacotes que complementam o botox'>
+				about='Informativo sobre a possibilidade de realização de procedimentos complementares'>
 				<TuaneParagraph>
-					Além do botox, ofereço tratamentos de harmonização facial
-					focados em valorizar seus traços naturais. Se você também se
-					incomoda com outros aspectos do seu rosto como o bigode
-					chinês, olheiras escuras e fundas ou, quem sabe, gostaria de
-					um pouco mais de volume e contorno na boca, minhas soluções
-					de harmonização facial podem lhe interessar. Agende uma
-					consulta para descobrirmos juntas como podemos atingir seus
-					objetivos.
+					Além da toxina butolínica, ofereço tratamentos de
+					harmonização facial focados em valorizar seus traços
+					naturais. Se você também se incomoda com outros aspectos do
+					seu rosto como o bigode chinês, olheiras escuras e fundas
+					ou, quem sabe, gostaria de um pouco mais de volume e
+					contorno na boca, minhas soluções de harmonização facial
+					podem lhe interessar. Agende uma consulta para descobrirmos
+					juntas como podemos atingir seus objetivos.
 				</TuaneParagraph>
 			</TuaneInfoSection>
 		</div>
