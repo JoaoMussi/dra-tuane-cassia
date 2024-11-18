@@ -1,6 +1,6 @@
 import { CardProps } from 'interfaces';
 
-export const botoxTestimonials: CardProps[] = [
+export const toxinTestimonials: CardProps[] = [
 	{
 		title: 'Hannah',
 		hideAction: true,

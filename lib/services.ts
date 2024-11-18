@@ -5,7 +5,10 @@ export const tuaneServices: CardProps[] = [
 		title: 'Toxina botulínica',
 		description:
 			'Popularmente conhecida como Botox®, esse procedimento promove o relaxamento da musculatura da face e do pescoço melhorando o aspecto das rugas e linhas de expressão.',
-		imageAttrs: { src: '/images/botox.jpeg', alt: 'Aplicação de botox' },
+		imageAttrs: {
+			src: '/images/wrinkles.jpeg',
+			alt: 'Aplicação de toxina butolínica',
+		},
 	},
 	{
 		title: 'Preenchimento com ácido hialurônico',

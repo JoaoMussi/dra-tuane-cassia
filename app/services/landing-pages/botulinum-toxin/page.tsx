@@ -1,11 +1,11 @@
 import { TuaneCarousel, TuaneInfoSection, TuaneParagraph } from 'components';
 import { whatsLinkWithMessage, WhatsMessages } from 'lib';
 import TuaneLandingPagesHero from '../landing-pages-hero';
-import { botoxTestimonials } from './botox-testimonials';
+import { toxinTestimonials } from './toxin-testimonials';
 
 export default function Page() {
 	return (
-		<div className='space-y-32 mb-8 md:mt-12'>
+		<div className='space-y-32 mb-8'>
 			<TuaneLandingPagesHero></TuaneLandingPagesHero>
 			<TuaneInfoSection
 				sectionName='Seu rosto mais jovem em poucos dias'
@@ -55,7 +55,7 @@ export default function Page() {
 				<TuaneCarousel
 					title='Depoimentos'
 					about='Confira alguns dos depoimentos deixados pelas pacientes que fizeram botox com a Dra. Tuane.'
-					cards={botoxTestimonials}
+					cards={toxinTestimonials}
 					fullWidthCards
 					options={{ align: 'start' }}
 				/>
@@ -66,7 +66,7 @@ export default function Page() {
 				title='Ficou interessada?'
 				about='Convite para agendamento da avaliação'
 				buttonLabel='Agendar avaliação'
-				buttonHref={whatsLinkWithMessage(WhatsMessages.LP_BOTOX)}
+				buttonHref={whatsLinkWithMessage(WhatsMessages.LP_TOXIN)}
 				buttonExternalLink>
 				<TuaneParagraph>
 					Clique no botão abaixo e agende sua consulta através do
