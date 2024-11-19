@@ -23,7 +23,7 @@ const getBuiltMessage = (messageType: WhatsMessages, param?: string) => {
 		],
 		[
 			WhatsMessages.LP_TOXIN,
-			`Oi, Dra. Tuane! Vi os resultados da toxina butolínica no seu site e me apaixonei! Gostaria de agendar uma avaliação para conversarmos sobre como você pode me ajudar.`,
+			`Oi, Dra. Tuane! Vi os resultados da toxina botulínica no seu site e me apaixonei! Gostaria de agendar uma avaliação para conversarmos sobre como você pode me ajudar.`,
 		],
 	]);
 

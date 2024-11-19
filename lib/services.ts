@@ -7,7 +7,7 @@ export const tuaneServices: CardProps[] = [
 			'Popularmente conhecida como Botox®, esse procedimento promove o relaxamento da musculatura da face e do pescoço melhorando o aspecto das rugas e linhas de expressão.',
 		imageAttrs: {
 			src: '/images/wrinkles.jpeg',
-			alt: 'Aplicação de toxina butolínica',
+			alt: 'Aplicação de toxina botulínica',
 		},
 	},
 	{

@@ -19,7 +19,7 @@ export default function TuaneLandingPagesHero() {
 						height={300}></Image>
 					<div>
 						<h1 className='text-4xl font-bold text-black'>
-							A toxina butolínica como cuidado pessoal para uma
+							A toxina botulínica como cuidado pessoal para uma
 							pele rejuvenescida e natural
 						</h1>
 						<p className='my-5 text-lg text-black'>
@@ -30,7 +30,7 @@ export default function TuaneLandingPagesHero() {
 							começam a aparecer em poucos dias e ficam super
 							naturais, sem mudar suas características. Se você
 							está pensando em dar uma rejuvenescida de maneira
-							discreta, a toxina butolínica pode ser a solução
+							discreta, a toxina botulínica pode ser a solução
 							ideal!
 						</p>
 						<TuaneButton

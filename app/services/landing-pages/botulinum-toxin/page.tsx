@@ -31,7 +31,7 @@ export default function Page() {
 			<TuaneInfoSection
 				sectionName='Seu rosto mais jovem em poucos dias'
 				title='Sinta-se bem com uma pele mais lisa e jovem, sem exageros.'
-				about='Descrição sobre como a Dra. Tuane Cássia pode solucionar suas rugas e imperfeições faciais através da toxina butolínica'
+				about='Descrição sobre como a Dra. Tuane Cássia pode solucionar suas rugas e imperfeições faciais através da toxina botulínica'
 				reverse
 				verifiedTopics={[
 					'Redução de rugas e linhas de expressão',
@@ -45,7 +45,7 @@ export default function Page() {
 				<TuaneParagraph>
 					As rugas e marcas de expressão são sinais naturais do tempo,
 					mas elas não precisam definir como você se vê no espelho.
-					Com a toxina butolínica, você pode suavizar essas linhas sem
+					Com a toxina botulínica, você pode suavizar essas linhas sem
 					perder a identidade do seu rosto. No meu consultório em
 					Joinville, cada atendimento é exclusivo e pensado para
 					realçar sua beleza de forma sutil, garantindo que seus
@@ -136,7 +136,7 @@ export default function Page() {
 				title='Harmonização Facial Natural e Elegante'
 				about='Informativo sobre a possibilidade de realização de procedimentos complementares'>
 				<TuaneParagraph>
-					Além da toxina butolínica, ofereço tratamentos de
+					Além da toxina botulínica, ofereço tratamentos de
 					harmonização facial focados em valorizar seus traços
 					naturais. Se você também se incomoda com outros aspectos do
 					seu rosto como o bigode chinês, olheiras escuras e fundas
