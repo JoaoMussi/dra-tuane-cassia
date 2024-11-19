@@ -48,7 +48,9 @@ export default function TuaneInfoSection({
 
 					<div className='flex flex-col gap-4'>
 						{verifiedTopics?.map(topic => (
-							<div className='flex items-start text-justify justify-start gap-3'>
+							<div
+								key={'topic' + topic}
+								className='flex items-start text-justify justify-start gap-3'>
 								<FaCircleCheck className='text-primary min-w-5 my-1' />
 								<p className='text-regular-p self-center antialiased max-w-[95%]'>
 									{topic}

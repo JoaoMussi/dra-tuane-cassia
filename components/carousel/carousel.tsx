@@ -54,7 +54,7 @@ export default function TuaneCarousel({
 									? styles.embla__slide_full_width
 									: styles.embla__slide + ' '
 							}
-							key={index}>
+							key={card.title + index}>
 							<TuaneCard
 								title={card.title}
 								imageAttrs={card.imageAttrs}
@@ -93,7 +93,7 @@ export default function TuaneCarousel({
 					<div className={`hidden md:flex ${styles.embla__dots}`}>
 						{scrollSnaps.map((_, index) => (
 							<DotButton
-								key={index}
+								key={'DotButton' + index}
 								onClick={() => onDotButtonClick(index)}
 								className={`m-1 btn btn-primary btn-circle btn-outline btn-xs`.concat(
 									index === selectedIndex ? ` btn-active` : ''
