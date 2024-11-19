@@ -81,8 +81,9 @@ export default function Page() {
 				about='Sessão com depoimentos de pacientes'>
 				<div className='w-100 m-auto grid md:grid-cols-3 grid-flow-row-dense gap-5'>
 					{testimonials.map(fileSrc => (
-						<figure>
+						<figure key={fileSrc} className='self-center'>
 							<Image
+								className='rounded-lg shadow-2xl'
 								src={fileSrc}
 								alt='Depoimento'
 								width={300}
@@ -101,8 +102,9 @@ export default function Page() {
 				about='Sessão com resultados de pacientes'>
 				<div className='w-100 m-auto grid md:grid-cols-3 grid-flow-row-dense gap-5'>
 					{results.map(fileSrc => (
-						<figure>
+						<figure key={fileSrc} className='self-center'>
 							<Image
+								className='rounded-lg shadow-2xl'
 								src={fileSrc}
 								alt='Resultado'
 								width={300}
@@ -116,17 +118,20 @@ export default function Page() {
 			<div className='divider'></div>
 
 			<TuaneInfoSection
-				sectionName='Não perca seu desconto!'
+				sectionName='Não perca esta condição especial!'
 				title='Ficou interessada?'
 				about='Convite para agendamento da avaliação'
 				buttonLabel='Agendar avaliação'
 				buttonHref={whatsLinkWithMessage(WhatsMessages.LP_TOXIN)}
 				buttonExternalLink>
 				<TuaneParagraph>
-					Clique no botão abaixo e agende sua consulta através do
-					WhatsApp! Não perca a oportunidade para conversar
-					diretamente comigo pelo WhatsApp e garantir seu desconto!
+					Clique no botão abaixo e me chama no WhatsApp para batermos
+					um papo!
 				</TuaneParagraph>
+				<p className='font-bold'>
+					Diga que você veio por esta página para garantir uma
+					condição muito especial!
+				</p>
 			</TuaneInfoSection>
 
 			<div className='divider'></div>

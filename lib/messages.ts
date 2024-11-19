@@ -4,6 +4,7 @@ export enum WhatsMessages {
 	GENERIC,
 	APPOINTMENT,
 	KNOW_MORE_SERVICE,
+	LP_TOXIN_1,
 	LP_TOXIN,
 }
 
@@ -22,8 +23,12 @@ const getBuiltMessage = (messageType: WhatsMessages, param?: string) => {
 			`Olá! Estava navegando pelo site e gostaria de saber mais sobre ${param}.`,
 		],
 		[
+			WhatsMessages.LP_TOXIN_1,
+			`Oi, Dra. Tuane! Vim pela página da toxina botulínica no seu site e gostaria de agendar uma avaliação para conversarmos e garantir a oferta especial.`,
+		],
+		[
 			WhatsMessages.LP_TOXIN,
-			`Oi, Dra. Tuane! Vi os resultados da toxina botulínica no seu site e me apaixonei! Gostaria de agendar uma avaliação para conversarmos sobre como você pode me ajudar.`,
+			`Oi, Dra. Tuane! Vi os resultados da toxina botulínica no seu site e me apaixonei! Gostaria de agendar uma avaliação para conversarmos sobre como você pode me ajudar e garantir a oferta especial.`,
 		],
 	]);
 
