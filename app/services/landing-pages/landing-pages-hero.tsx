@@ -1,3 +1,4 @@
+import { sendGAEvent } from '@next/third-parties/google';
 import { TuaneButton } from 'components';
 import { WhatsMessages, whatsLinkWithMessage } from 'lib';
 import Image from 'next/image';
@@ -54,6 +55,15 @@ export default function TuaneLandingPagesHero() {
 								href={whatsLinkWithMessage(
 									WhatsMessages.LP_TOXIN_1
 								)}
+								onClick={() =>
+									sendGAEvent('event', 'conversion', {
+										send_to: [
+											'AW-16774961383/Aq3UCL371usZEOex9r4-',
+										],
+										button_section: 'hero',
+										event_callback: window.location,
+									})
+								}
 								outline={false}
 								externalLink>
 								Agendar avaliação

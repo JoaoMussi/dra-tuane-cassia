@@ -27,6 +27,7 @@ export default function RootLayout({
 				<TuaneFooter />
 			</body>
 			<GoogleAnalytics gaId='G-83E4PVFDZ4' />
+			<GoogleAnalytics gaId='AW-16774961383' />
 		</html>
 	);
 }

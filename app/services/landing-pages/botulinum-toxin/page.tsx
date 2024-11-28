@@ -1,3 +1,6 @@
+'use client';
+
+import { sendGAEvent } from '@next/third-parties/google';
 import { TuaneInfoSection, TuaneParagraph } from 'components';
 import { whatsLinkWithMessage, WhatsMessages } from 'lib';
 import Image from 'next/image';
@@ -123,7 +126,14 @@ export default function Page() {
 				about='Convite para agendamento da avaliação'
 				buttonLabel='Agendar avaliação'
 				buttonHref={whatsLinkWithMessage(WhatsMessages.LP_TOXIN)}
-				buttonExternalLink>
+				buttonExternalLink
+				buttonOnClick={() =>
+					sendGAEvent('event', 'conversion', {
+						send_to: ['AW-16774961383/Aq3UCL371usZEOex9r4-'],
+						button_section: 'call_to_action',
+						event_callback: window.location,
+					})
+				}>
 				<TuaneParagraph>
 					Clique no botão abaixo e me chama no WhatsApp para batermos
 					um papo!

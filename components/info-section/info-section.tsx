@@ -2,6 +2,7 @@ import TuaneButton from 'components/button/button';
 import TuaneSectionHeader from 'components/section-header/section-header';
 import { NextImageAttrs } from 'interfaces';
 import Image from 'next/image';
+import { MouseEventHandler } from 'react';
 import { FaCircleCheck } from 'react-icons/fa6';
 
 export default function TuaneInfoSection({
@@ -14,6 +15,7 @@ export default function TuaneInfoSection({
 	buttonLabel,
 	buttonHref,
 	buttonExternalLink = false,
+	buttonOnClick,
 	regularWidth = true,
 	children,
 }: {
@@ -26,6 +28,7 @@ export default function TuaneInfoSection({
 	buttonLabel?: string;
 	buttonHref?: string;
 	buttonExternalLink?: boolean;
+	buttonOnClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 	regularWidth?: boolean;
 	children: React.ReactNode;
 }) {
@@ -61,6 +64,7 @@ export default function TuaneInfoSection({
 					{buttonLabel && (
 						<div className='w-full flex flex-col items-center'>
 							<TuaneButton
+								onClick={buttonOnClick}
 								href={buttonHref}
 								externalLink={buttonExternalLink}>
 								{buttonLabel}
