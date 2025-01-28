@@ -37,7 +37,7 @@ export default function TuaneInfoSection({
 			about={about}
 			className={regularWidth ? 'regular-width' : undefined}>
 			<div
-				className={`flex items-center gap-8 md:gap-44 ${
+				className={`flex items-center gap-8 md:gap-16 ${
 					reverse
 						? 'flex-col-reverse md:flex-row-reverse'
 						: 'flex-col md:flex-row'
