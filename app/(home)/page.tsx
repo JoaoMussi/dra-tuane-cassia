@@ -50,16 +50,16 @@ export default function Home() {
 					'Tratamentos corporais para ajudar você a alcançar a aparência desejada de forma segura e efetiva.',
 				]}
 				image={{
-					src: '/images/clinica-dukeze.jpg',
-					alt: 'Foto da Dra Tuane Cássia',
-					width: 350,
+					src: '/images/nova-clinica.png',
+					alt: 'Foto da recepção da clínica da Dra Tuane Cássia',
+					width: 500,
 				}}>
 				<TuaneParagraph>
 					Aqui entendemos que cada pessoa é única e merece um cuidado
-					personalizado. Localizado na Clínica Integrada Dukeze,
-					estamos comprometidos em fornecer uma experiência única,
-					garantindo que você se sinta confortável e bem cuidado em
-					cada visita.
+					personalizado. Nossa clínica está localizada no prédio
+					Helbor Offices e estamos comprometidos em fornecer uma
+					experiência única, garantindo que você se sinta confortável
+					e bem cuidado em cada visita.
 				</TuaneParagraph>
 			</TuaneInfoSection>
 
