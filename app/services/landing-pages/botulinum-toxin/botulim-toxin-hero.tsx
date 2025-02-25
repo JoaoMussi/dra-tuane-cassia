@@ -38,22 +38,24 @@ export default function TuaneBotulimToxinHero() {
 							sinais do tempo.
 						</p>
 						<p className='mb-5 text-base text-black'>
-							Com a toxina botulínica, você pode voltar a se
-							sentir bem com a sua aparência de forma natural,
-							rápida e sem a necessidade de cirurgia. A
-							transformação é discreta, e os resultados começam a
-							aparecer em poucos dias, preservando suas
+							Com a{' '}
+							<span className='font-bold'>toxina botulínica</span>
+							, você pode voltar a se sentir bem com a sua
+							aparência de forma{' '}
+							<span className='font-bold'>
+								natural, rápida e sem a necessidade de cirurgia
+							</span>
+							. A transformação é discreta, e os resultados
+							começam a aparecer em poucos dias, preservando suas
 							características mais autênticas.
 						</p>
 						<p className='mb-5 text-base text-black'>
 							Continua navegando nesta página para descobrir os
 							benefícios da toxina botulínica ou clique no botão
-							abaixo e agende uma avaliação. Tenho uma
-							<span className='font-bold'>
-								{' '}
-								condição especial
-							</span>{' '}
-							para você!
+							abaixo e agende uma avaliação.{' '}
+						</p>
+						<p className='mb-5 text-base text-black font-bold'>
+							Temos uma condição especial para você!
 						</p>
 						<div className='text-center'>
 							<TuaneButton
