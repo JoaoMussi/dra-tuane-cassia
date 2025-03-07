@@ -93,6 +93,7 @@ export default function TuaneCarousel({
 					<div className={`hidden md:flex ${styles.embla__dots}`}>
 						{scrollSnaps.map((_, index) => (
 							<DotButton
+								aria-label={'Navigate to page ' + index}
 								key={'DotButton' + index}
 								onClick={() => onDotButtonClick(index)}
 								className={`m-1 btn btn-primary btn-circle btn-outline btn-xs`.concat(

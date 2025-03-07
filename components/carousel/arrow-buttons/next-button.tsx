@@ -7,6 +7,7 @@ export default function NextButton({ children, ...restProps }: ButtonProps) {
 		<button
 			className={`btn btn-primary btn-outline btn-circle`}
 			type='button'
+			aria-label='Próximo'
 			{...restProps}>
 			<svg className={'w-4 h-4'} viewBox='0 0 532 532'>
 				<path

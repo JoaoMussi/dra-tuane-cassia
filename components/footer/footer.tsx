@@ -1,5 +1,4 @@
-import { TuaneRoutes } from 'lib';
-import { TuaneLinks, whatsLinkWithMessage } from 'lib';
+import { TuaneLinks, TuaneRoutes, whatsLinkWithMessage } from 'lib';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -15,7 +14,7 @@ export default function TuaneFooter() {
 					height={200}></Image>
 			</aside>
 			<nav className='mx-auto'>
-				<h6 className='footer-title'>Páginas</h6>
+				<p className='footer-title'>Páginas</p>
 				<Link className='link' href={TuaneRoutes.HOME}>
 					Página inicial
 				</Link>
@@ -26,15 +25,24 @@ export default function TuaneFooter() {
 				</Link>
 			</nav>
 			<nav className='mx-auto'>
-				<h6 className='footer-title'>Redes sociais</h6>
+				<p className='footer-title'>Redes sociais</p>
 				<div className='grid grid-flow-col gap-4 text-4xl'>
-					<Link href={TuaneLinks.FACEBOOK} target='_blank'>
+					<Link
+						href={TuaneLinks.FACEBOOK}
+						target='_blank'
+						aria-label='Link para o facebook'>
 						<FaFacebook />
 					</Link>
-					<Link href={TuaneLinks.INSTAGRAM} target='_blank'>
+					<Link
+						href={TuaneLinks.INSTAGRAM}
+						target='_blank'
+						aria-label='Link para o instagram'>
 						<FaInstagram />
 					</Link>
-					<Link href={whatsLinkWithMessage()} target='_blank'>
+					<Link
+						href={whatsLinkWithMessage()}
+						target='_blank'
+						aria-label='Link para iniciar conversa no WhatsApp com a Dra Tuane Cássia'>
 						<FaWhatsapp />
 					</Link>
 				</div>
