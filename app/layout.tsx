@@ -5,6 +5,7 @@ import { montserrat } from './styles/fonts';
 import './styles/globals.css';
 import './styles/reset.css';
 import Script from 'next/script';
+import WhatsApp from 'components/whatsapp/whatsapp';
 
 export const metadata: Metadata = {
 	title: {
@@ -40,6 +41,7 @@ export default function RootLayout({
 							`,
 					}}
 				/>
+				<WhatsApp />
 			</body>
 			<GoogleAnalytics gaId='G-83E4PVFDZ4' />
 			<GoogleAnalytics gaId='AW-16774961383' />
